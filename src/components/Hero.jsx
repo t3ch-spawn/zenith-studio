@@ -11,7 +11,9 @@ export default function Hero() {
   useEffect(() => {
     const heroImgEl = document.querySelector(".hero-img-cont");
 
-    heroImgEl.style.bottom = `${-heroImgHeight}px`;
+    heroImgEl.style.bottom = `${
+      -Math.floor(heroImgEl.getBoundingClientRect().height) / 2
+    }px`;
 
     setHeroImgHeight(Math.floor(heroImgEl.getBoundingClientRect().height) / 2);
 
@@ -19,6 +21,10 @@ export default function Hero() {
       setHeroImgHeight(
         Math.floor(heroImgEl.getBoundingClientRect().height) / 2
       );
+
+      heroImgEl.style.bottom = `${
+        -Math.floor(heroImgEl.getBoundingClientRect().height) / 2
+      }px`;
     });
   }, [heroImgHeight]);
   return (
