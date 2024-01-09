@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function Hero() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set(".hero-image", { y: -100 });
+    gsap.set(".hero-image", { y: -80 });
 
     gsap.to(".hero-image", {
       scrollTrigger: {
@@ -37,12 +37,8 @@ export default function Hero() {
         <button>Scroll down</button>
       </div>
 
-      <div className="overflow-hidden border-black border-1px">
-        <img
-          className="hero-image max-w-[400px] mx-auto"
-          src={heroImg}
-          alt=""
-        />
+      <div className=" border-black  mx-auto max-w-[400px] flex h-full overflow-hidden">
+        <img className="hero-image  mx-auto scale-[1.2]" src={heroImg} alt="" />
       </div>
     </section>
   );
