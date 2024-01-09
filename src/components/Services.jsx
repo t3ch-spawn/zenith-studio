@@ -10,7 +10,7 @@ export default function Services() {
 
     servicesEL.style.marginTop = `${heroImgHeight + 100}px`;
 
-    if (heroImgEl.style.bottom == "0px") {
+    if (servicesEL.style.marginTop == "100px") {
       servicesEL.style.marginTop = "333px";
     }
   }, [heroImgHeight]);
