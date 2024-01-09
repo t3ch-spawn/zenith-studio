@@ -8,10 +8,11 @@ export default function Services() {
     const servicesEL = document.querySelector(".services-section");
     const heroImgEl = document.querySelector(".hero-img-cont");
 
+    servicesEL.style.marginTop = `${heroImgHeight + 100}px`;
+
     if (heroImgEl.style.bottom == "0px") {
       servicesEL.style.marginTop = "333px";
     }
-    servicesEL.style.marginTop = `${heroImgHeight + 100}px`;
   }, [heroImgHeight]);
   return (
     <section className="services-section">
