@@ -7,13 +7,15 @@ import { Context } from "../App";
 
 export default function Hero() {
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
-
   useEffect(() => {
     const heroImgEl = document.querySelector(".hero-img-cont");
 
     heroImgEl.style.bottom = `${
       -Math.floor(heroImgEl.getBoundingClientRect().height) / 2
     }px`;
+    if (heroImgEl.style.bottom == "0px") {
+      heroImgEl.style.bottom = "-333px";
+    }
 
     setHeroImgHeight(Math.floor(heroImgEl.getBoundingClientRect().height) / 2);
 
@@ -61,9 +63,7 @@ export default function Hero() {
       </div>
 
       <div
-        className={`hero-img-cont max-w-[1000px] w-[90%] absolute bottom-[${
-          heroImgHeight && -heroImgHeight
-        }px] left-[50%] translate-x-[-50%]`}
+        className={`hero-img-cont max-w-[1000px] w-[90%] absolute left-[50%] translate-x-[-50%]`}
       >
         <ParallaxImg imgSrc={heroImg} styles="" />
       </div>

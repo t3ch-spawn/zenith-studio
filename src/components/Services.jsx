@@ -5,9 +5,13 @@ export default function Services() {
   const [heroImgHeight] = useContext(Context);
 
   useEffect(() => {
-    document.querySelector(".services-section").style.marginTop = `${
-      heroImgHeight + 100
-    }px`;
+    const servicesEL = document.querySelector(".services-section");
+    const heroImgEl = document.querySelector(".hero-img-cont");
+
+    if (heroImgEl.style.bottom == "0px") {
+      servicesEL.style.marginTop = "333px";
+    }
+    servicesEL.style.marginTop = `${heroImgHeight + 100}px`;
   }, [heroImgHeight]);
   return (
     <section className="services-section">
