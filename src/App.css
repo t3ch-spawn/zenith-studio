@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+main > section {
+  padding: 2rem;
+}
+
+.hero-arrow-down {
+  animation: arrDownMotion 1.5s infinite;
+}
+
+@keyframes arrDownMotion {
+  0% {
+    transform: translateY(-100px) rotate(90deg);
+  }
+
+  20% {
+    transform: translateY(0px) rotate(90deg);
+  }
+
+  70% {
+    transform: translateY(0px) rotate(90deg);
+  }
+
+  100% {
+    transform: translateY(100px) rotate(90deg);
+  }
+}
