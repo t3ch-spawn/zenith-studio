@@ -4,12 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ParallaxImg(props) {
   const imgRef = useRef(null);
-  ParallaxImg.defaultProps = {
-    trigger: imgRef.current
-  };
+  //   ParallaxImg.defaultProps = {
+  //     trigger: imgRef.current,
+  //   };
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set(imgRef.current, { y: -80 });
+    gsap.set(imgRef.current, { y: -75 });
 
     gsap.to(imgRef.current, {
       scrollTrigger: {
@@ -25,7 +25,7 @@ export default function ParallaxImg(props) {
     <div className={`flex overflow-hidden ${props.styles}`}>
       <img
         ref={imgRef}
-        className="mx-auto scale-[1.15]"
+        className="mx-auto scale-[1.15] min-h-[300px]"
         src={props.imgSrc}
         alt=""
       />

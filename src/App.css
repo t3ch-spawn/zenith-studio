@@ -27,3 +27,13 @@ main > section {
     transform: translateY(100px) rotate(90deg);
   }
 }
+
+.services-lines {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  height: 1px;
+}
+
+.teststubwiuf{
+    color: #f3eeee66
+}

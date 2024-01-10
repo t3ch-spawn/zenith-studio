@@ -42,9 +42,9 @@ export default function Hero() {
       </div>
 
       <div
-        className={`hero-img-cont max-w-[1000px] w-[90%] bottom-[0%] translate-y-[50%] absolute left-[50%] translate-x-[-50%]`}
+        className={` hero-img-cont max-w-[1000px] w-[90%] bottom-[0%] translate-y-[50%] absolute left-[50%] translate-x-[-50%]`}
       >
-        <ParallaxImg imgSrc={heroImg} styles="" />
+        <ParallaxImg imgSrc={heroImg} imgTrigger=".hero-img-cont" styles="" />
       </div>
     </section>
   );
