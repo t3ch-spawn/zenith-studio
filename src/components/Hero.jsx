@@ -7,28 +7,7 @@ import { Context } from "../App";
 
 export default function Hero() {
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
-  useEffect(() => {
-    const heroImgEl = document.querySelector(".hero-img-cont");
 
-    heroImgEl.style.bottom = `${
-      -Math.floor(heroImgEl.getBoundingClientRect().height) / 2
-    }px`;
-    if (heroImgEl.style.bottom == "0px") {
-      heroImgEl.style.bottom = "-333px";
-    }
-
-    setHeroImgHeight(Math.floor(heroImgEl.getBoundingClientRect().height) / 2);
-
-    window.addEventListener("resize", () => {
-      setHeroImgHeight(
-        Math.floor(heroImgEl.getBoundingClientRect().height) / 2
-      );
-
-      heroImgEl.style.bottom = `${
-        -Math.floor(heroImgEl.getBoundingClientRect().height) / 2
-      }px`;
-    });
-  }, [heroImgHeight]);
   return (
     <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative min-h-[100vh]">
       {/* div containing heading and typography */}
@@ -63,7 +42,7 @@ export default function Hero() {
       </div>
 
       <div
-        className={`hero-img-cont max-w-[1000px] w-[90%] absolute left-[50%] translate-x-[-50%]`}
+        className={`hero-img-cont max-w-[1000px] w-[90%] bottom-[0%] translate-y-[50%] absolute left-[50%] translate-x-[-50%]`}
       >
         <ParallaxImg imgSrc={heroImg} styles="" />
       </div>
