@@ -20,13 +20,13 @@ export default function Services() {
     serviceDivs.forEach((div, idx, array) => {
       gsap.to(div, {
         scrollTrigger: {
-          start: "top top",
+          start: "top 10%",
           trigger: div,
           scrub: true,
-          // markers: true,
+          markers: true,
         },
         position: "sticky",
-        top: "0px",
+        top: "10%",
         z: idx == array.length - 1 ? "" : "-10vw",
         rotateY: idx == array.length - 1 ? "" : "-20deg",
         transformOrigin: "top",
@@ -40,7 +40,7 @@ export default function Services() {
           end: "50% 20%",
           trigger: array[idx + 1],
           scrub: -1,
-          markers: true,
+          // markers: true,
         },
         // position: "sticky",
         // top: "0px",
