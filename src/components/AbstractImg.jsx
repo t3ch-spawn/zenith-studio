@@ -14,7 +14,7 @@ export default function AbstractImg() {
         trigger: ".abstract-container",
         // markers: true,
       },
-      y: '20%',
+      y: "20%",
     });
   }, []);
   return (

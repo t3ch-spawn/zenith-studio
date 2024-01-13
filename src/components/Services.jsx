@@ -29,8 +29,8 @@ export default function Services() {
         position: "sticky",
         top: "10%",
         z: idx == array.length - 1 ? "" : "-10vw",
-        rotateY: idx == array.length - 1 ? "" : "-20deg",
-        transformOrigin: "top",
+        rotateY:
+          idx == array.length - 1 ? "" : (idx + 1) % 2 == 1 ? "25deg" : "-25deg",
       });
     });
 
@@ -82,7 +82,7 @@ export default function Services() {
 
   return (
     <section className="services-section flex flex-col gap-10 mt-[32%] z-[15] relative">
-      <h2 className="text-6xl">
+      <h2 className="text-6xl -950:text-4xl">
         <span>
           Services
           <hr className="services-lines" />
@@ -97,7 +97,7 @@ export default function Services() {
         </span>
       </h2>
 
-      <div className="w-full flex justify-end">
+      <div className="w-full flex justify-end -950:justify-start">
         <p className="w-full max-w-[400px]">
           Our architectural firm takes a distinctive approach to services,
           fostering a casual and conversational process. From initial
