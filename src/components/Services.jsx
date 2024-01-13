@@ -30,7 +30,11 @@ export default function Services() {
         top: "10%",
         z: idx == array.length - 1 ? "" : "-10vw",
         rotateY:
-          idx == array.length - 1 ? "" : (idx + 1) % 2 == 1 ? "25deg" : "-25deg",
+          idx == array.length - 1
+            ? ""
+            : (idx + 1) % 2 == 1
+            ? "25deg"
+            : "-25deg",
       });
     });
 
@@ -81,7 +85,10 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="services-section flex flex-col gap-10 mt-[32%] z-[15] relative">
+    <section
+      id="services"
+      className="services-section flex flex-col gap-10 mt-[32%] z-[15] relative"
+    >
       <h2 className="text-6xl -950:text-4xl">
         <span>
           Services

@@ -9,7 +9,7 @@ export default function ParallaxImg(props) {
   //   };
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set(imgRef.current, { y: -75 });
+    gsap.set(imgRef.current, { y: '-30%' });
 
     gsap.to(imgRef.current, {
       scrollTrigger: {
@@ -17,7 +17,7 @@ export default function ParallaxImg(props) {
         trigger: props.imgTrigger,
         // markers: true,
       },
-      y: 0,
+      y: '10%',
     });
   }, []);
 

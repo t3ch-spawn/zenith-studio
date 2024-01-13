@@ -6,6 +6,7 @@ export default {
       colors: {
         grayBg: "#353434",
         grayText: "#f3eeee66",
+        folioGray: "#ffffff99",
       },
 
       screens: {

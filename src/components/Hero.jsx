@@ -4,12 +4,13 @@ import heroImg from "../assets/hero-image.png";
 import ParallaxImg from "./reusables/ParallaxImg";
 import arrowRight from "../assets/arrow-right.svg";
 import { Context } from "../App";
+import GetInTouch from "./reusables/GetInTouch";
 
 export default function Hero() {
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
 
   return (
-    <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative min-h-[100vh] -950:min-h-[70vh]">
+    <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative min-h-[100vh] -750:min-h-[80vh]">
       {/* div containing heading and typography */}
       <div className="flex flex-col max-w-[600px] w-full gap-[50px]">
         <h1 className="text-6xl -950:text-4xl -500:text-4xl">
@@ -24,15 +25,9 @@ export default function Hero() {
       {/* div containing the buttons */}
       <div className="justify-between flex">
         {/* Get in touch btn */}
-        <button className="flex items-center justify-center text-3xl -950:text-2xl gap-4 text-grayBg bg-white rounded-[40px] p-2 pl-3">
-          Get in touch
-          <div className="flex p-3 -550:p-1 rounded-[50%] bg-grayBg">
-            <img src={arrowRight} className="-950:w-[30px]" alt="" />
-          </div>
-        </button>
-
+        <GetInTouch phrase="Get in touch" />
         {/* Scroll down btn */}
-        <button className="flex items-center gap-2 -550:hidden">
+        <a href="#services" className="flex items-center gap-2 -550:hidden">
           Scroll down
           <div className="border-white border-[2px] rounded-[50%] p-4 flex justify-center items-center overflow-hidden">
             <img
@@ -41,7 +36,7 @@ export default function Hero() {
               alt=""
             />
           </div>
-        </button>
+        </a>
       </div>
 
       <div

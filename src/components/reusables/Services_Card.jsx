@@ -19,7 +19,7 @@ export default function Services_Card(props) {
       {/* Container for typography explaining the image */}
       <div className="flex flex-col gap-4 bg-grayBg text-white p-4">
         <p className="text-xs">
-          <span className="text-grayText text-base">Interior Design.</span>{" "}
+          <span className="text-grayText text-base">Interior Design<span className="text-white text-2xl">. </span></span>
           Revamp your spaces with our personalized interior design. Casual and
           collaborative, we seamlessly blend style and functionality to elevate
           your lifestyle.
