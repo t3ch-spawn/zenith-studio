@@ -13,7 +13,7 @@ export default function Services_Card(props) {
       <ParallaxImg
         imgSrc={props.imgSrc}
         imgTrigger={props.imgTrigger}
-        styles="max-h-[280px]"
+        styles="max-h-[280px] -500:max-h-[180px]"
       />
 
       {/* Container for typography explaining the image */}

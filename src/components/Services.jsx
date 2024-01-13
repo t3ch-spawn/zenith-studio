@@ -29,11 +29,28 @@ export default function Services() {
         top: "0px",
         z: idx == array.length - 1 ? "" : "-10vw",
         rotateY: idx == array.length - 1 ? "" : "-20deg",
-        // autoAlpha: idx == array.length - 1 ? "" : "0",
         transformOrigin: "top",
       });
     });
 
+    serviceDivs.forEach((div, idx, array) => {
+      gsap.to(div, {
+        scrollTrigger: {
+          start: "top 20%",
+          end: "50% 20%",
+          trigger: array[idx + 1],
+          scrub: -1,
+          markers: true,
+        },
+        // position: "sticky",
+        // top: "0px",
+        // z: idx == array.length - 1 ? "" : "-10vw",
+        opacity: idx == array.length - 1 ? "" : "0",
+        // transformOrigin: "top",
+      });
+    });
+
+    // Scroll trigger that pins the description container on the left
     ScrollTrigger.create({
       trigger: ".service-divs-container",
       animation: gsap.to(".description-container", {
@@ -43,21 +60,13 @@ export default function Services() {
       }),
     });
 
-    console.log(document.querySelectorAll(".description-line:before"));
-    console.log(
-      window.getComputedStyle(
-        document.querySelector(".description-line"),
-        ":before"
-      )
-    );
-
+    // Animation that tells the lines when to grow, based on the div that is currently being shown
     lines.forEach((line, idx) => [
       ScrollTrigger.create({
         trigger: serviceDivs[idx],
         scrub: true,
         start: "top 40%%",
         end: "bottom 40%",
-        // markers: true,
         animation: gsap.to(line, {
           width: "100%",
           height: "3px",
@@ -106,7 +115,7 @@ export default function Services() {
       {/* Overall container for pictures and description */}
       <div className="flex justify-between relative service-all-container min-h-[100vh]">
         {/* Container for description on the left */}
-        <div className="description-container h-full max-w-[300px] w-full flex flex-col gap-4">
+        <div className="description-container h-full max-w-[300px] w-full flex flex-col gap-4 -500:hidden">
           <DescriptionHelper number="01" descrip="Architectural Design" />
           <DescriptionHelper number="02" descrip="Interior Design" />
           <DescriptionHelper number="03" descrip="Space Design" />
