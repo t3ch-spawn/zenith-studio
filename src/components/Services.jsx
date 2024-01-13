@@ -23,7 +23,7 @@ export default function Services() {
           start: "top 10%",
           trigger: div,
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         position: "sticky",
         top: "10%",
