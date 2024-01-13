@@ -3,6 +3,7 @@ import "./App.css";
 import Lenis from "@studio-freight/lenis";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import AbstractImg from "./components/AbstractImg";
 
 export const Context = React.createContext();
 
@@ -26,7 +27,8 @@ function App() {
       <main>
         <Hero />
         <Services />
-        <div className="min-h-[100vh]">
+        <AbstractImg />
+        <div className="min-h-[100vh] bg-[red] relative z-[15]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
           nesciunt, mollitia incidunt sunt unde quas deserunt fugiat porro
           praesentium, debitis necessitatibus autem quia iure tempora vero, sint

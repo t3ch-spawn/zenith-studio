@@ -17,6 +17,7 @@ export default function Services() {
     const serviceDivs = gsap.utils.toArray(".service-div");
     const lines = gsap.utils.toArray(".description-line");
 
+    // Animation that pins each card successively to the top of the page, using position sticky
     serviceDivs.forEach((div, idx, array) => {
       gsap.to(div, {
         scrollTrigger: {
@@ -33,6 +34,7 @@ export default function Services() {
       });
     });
 
+    // Animation that fades the cards out once they have reached the top, using the next card as a trigger
     serviceDivs.forEach((div, idx, array) => {
       gsap.to(div, {
         scrollTrigger: {
@@ -42,11 +44,8 @@ export default function Services() {
           scrub: -1,
           // markers: true,
         },
-        // position: "sticky",
-        // top: "0px",
-        // z: idx == array.length - 1 ? "" : "-10vw",
+
         opacity: idx == array.length - 1 ? "" : "0",
-        // transformOrigin: "top",
       });
     });
 
@@ -82,7 +81,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="services-section flex flex-col gap-10 mt-[32%]">
+    <section className="services-section flex flex-col gap-10 mt-[32%] z-[15] relative">
       <h2 className="text-6xl">
         <span>
           Services
@@ -113,9 +112,9 @@ export default function Services() {
       </div>
 
       {/* Overall container for pictures and description */}
-      <div className="flex justify-between relative service-all-container min-h-[100vh]">
+      <div className="flex justify-between -950:justify-center px-10 -500:px-1 gap-6  relative service-all-container min-h-[100vh]">
         {/* Container for description on the left */}
-        <div className="description-container h-full max-w-[300px] w-full flex flex-col gap-4 -500:hidden">
+        <div className="description-container h-full max-w-[300px] w-full flex flex-col gap-4 -950:hidden">
           <DescriptionHelper number="01" descrip="Architectural Design" />
           <DescriptionHelper number="02" descrip="Interior Design" />
           <DescriptionHelper number="03" descrip="Space Design" />

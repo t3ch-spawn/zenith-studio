@@ -5,7 +5,7 @@ export default function Services_Card(props) {
   return (
     <div className={`z-[${props.number}] service-card max-w-[550px] relative`}>
       <p
-        className={`absolute left-[20px] top-[20px] text-white text-7xl font-bold z-[10]`}
+        className={`absolute left-[20px] top-[20px] text-white text-7xl font-bold z-[5]`}
       >
         {props.number}
       </p>
