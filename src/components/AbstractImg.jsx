@@ -18,10 +18,10 @@ export default function AbstractImg() {
     });
   }, []);
   return (
-    <div className="z-[10] min-h-[100vh] -750:min-h-[120vh] -550:min-h-[150vh] abstract-container overflow-hidden relative">
+    <div className="z-[10] min-h-[100vh] -750:min-h-[120vh] abstract-container overflow-hidden relative">
       <img
         src={abstract}
-        className="abstract-image w-full h-[120%] flex relative -500:absolute top-0 left-0"
+        className="abstract-image w-full h-[100%] flex relative object-cover -750:absolute top-0 left-0"
         alt=""
       />
     </div>
