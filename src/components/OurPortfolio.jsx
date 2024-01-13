@@ -24,7 +24,7 @@ export default function OurPortfolio() {
         <GetInTouch
           phrase="Browse portfolio"
           arrStyles="hidden"
-          styles="bg-transparent border-white border-[1px] text-white p-4 !px-6 w-full max-w-[280px] -550:max-w-[400px]"
+          styles="bg-transparent border-white border-[1px] !text-white p-4 !px-6 w-full max-w-[280px] -550:max-w-[400px]"
         />
       </div>
     </div>
