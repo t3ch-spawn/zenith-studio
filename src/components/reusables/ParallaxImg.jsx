@@ -25,7 +25,7 @@ export default function ParallaxImg(props) {
     <div className={`flex overflow-hidden ${props.styles}`}>
       <img
         ref={imgRef}
-        className="mx-auto scale-[1.15] min-h-[300px]"
+        className="mx-auto scale-[1.15] min-h-[300px] -500:min-h-[250px]"
         src={props.imgSrc}
         alt=""
       />

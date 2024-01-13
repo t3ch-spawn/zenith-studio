@@ -7,6 +7,10 @@ export default {
         grayBg: "#353434",
         grayText: "#f3eeee66",
       },
+
+      screens: {
+        "-500": { max: "500px" },
+      },
     },
   },
   plugins: [],

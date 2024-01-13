@@ -33,7 +33,26 @@ main > section {
   border: none;
   height: 1px;
 }
+.description-line {
+  content: "";
+  background-color: black;
+  border: none;
+  height: 1px;
+  width: 10%;
+  position: absolute;
+}
 
-.teststubwiuf{
-    color: #f3eeee66
+.teststubwiuf {
+  color: #f3eeee66;
+}
+
+.service-div {
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  height: 100%;
+}
+
+.service-divs-container {
+  perspective: 100vw;
 }
