@@ -25,7 +25,7 @@ export default function Hero() {
       {/* div containing the buttons */}
       <div className="justify-between flex">
         {/* Get in touch btn */}
-        <GetInTouch phrase="Get in touch" />
+        <GetInTouch phrase="Get in touch" styles="-500:w-[90%] -500:mx-auto -400:w-full"/>
         {/* Scroll down btn */}
         <a href="#services" className="flex items-center gap-2 -550:hidden">
           Scroll down
