@@ -32,9 +32,9 @@ export default function Services() {
         rotateY:
           idx == array.length - 1
             ? ""
-            : (idx + 1) % 2 == 1
-            ? "25deg"
-            : "-25deg",
+            : (idx + 2) % 2 == 1
+            ? "24deg"
+            : "-24deg",
       });
     });
 
@@ -42,10 +42,10 @@ export default function Services() {
     serviceDivs.forEach((div, idx, array) => {
       gsap.to(div, {
         scrollTrigger: {
-          start: "top 20%",
-          end: "50% 20%",
+          start: "top 30%",
+          end: "50% 30%",
           trigger: array[idx + 1],
-          scrub: -1,
+          scrub: true,
           // markers: true,
         },
 
@@ -87,21 +87,28 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="services-section flex flex-col gap-10 mt-[32%] z-[15] relative"
+      className="services-section flex flex-col gap-10 mt-[30%] -550:mt-[35%] z-[15] relative"
     >
-      <h2 className="text-6xl -950:text-4xl">
-        <span>
-          Services
+      <h2 className="text-6xl -950:text-3xl">
+        <span className="max-w-[500px] hidden -400:block  -400:!text-3xl">
+          Services <br /> Our process is casual and conversational
           <hr className="services-lines" />
         </span>
-        <span>
-          Our process is casual
-          <hr className="services-lines" />
-        </span>
-        <span>
-          and conversational
-          <hr className="services-lines" />
-        </span>
+
+        <div className="-400:hidden">
+          <span className="w-full relative">
+            Services
+            <hr className="services-lines" />
+          </span>
+          <span className="w-full relative">
+            Our process is casual
+            <hr className="services-lines" />
+          </span>
+          <span className="w-full relative">
+            and conversational
+            <hr className="services-lines" />
+          </span>
+        </div>
       </h2>
 
       <div className="w-full flex justify-end -950:justify-start">
@@ -136,6 +143,8 @@ export default function Services() {
               imgSrc={architecture}
               imgTrigger=".architecture"
               number="01"
+              para="Transforming Visions into Architectural Masterpieces, Where Casual Conversations Inspire Extraordinary Design Solutions..."
+              heading="Architectural Design"
             />
           </div>
           <div className="interior service-div">
@@ -143,16 +152,26 @@ export default function Services() {
               imgSrc={interior}
               imgTrigger=".interior"
               number="02"
+              para=" Revamp your spaces with our personalized interior design. Casual and collaborative, we seamlessly blend style and functionality to elevate your lifestyle."
+              heading="Interior Design"
             />
           </div>
           <div className="space service-div">
-            <Services_Card imgSrc={space} imgTrigger=".space" number="03" />
+            <Services_Card
+              imgSrc={space}
+              imgTrigger=".space"
+              number="03"
+              para="Transform spaces effortlessly with our personalized space design. Casual and collaborative, we balance style and functionality to enhance your lifestyle."
+              heading="Space Design"
+            />
           </div>
           <div className="exterior service-div">
             <Services_Card
               imgSrc={exterior}
               imgTrigger=".exterior"
               number="04"
+              para="Elevate your outdoor space with our personalized exterior design—blending style and practicality effortlessly."
+              heading="Exterior Design"
             />
           </div>
           <div className="construction service-div">
@@ -160,6 +179,8 @@ export default function Services() {
               imgSrc={construction}
               imgTrigger=".construction"
               number="05"
+              para="Transform with our construction expertise. Casual, collaborative, extraordinary."
+              heading="Construction"
             />
           </div>
         </div>
@@ -172,7 +193,7 @@ function DescriptionHelper(props) {
   return (
     <div className="w-full description-div">
       <div className="flex gap-10">
-        <p>{props.number}</p> <p>{props.descrip}</p>
+        <p className="italic">{props.number}</p> <p>{props.descrip}</p>
       </div>
       <div className="description-line relative" />
     </div>

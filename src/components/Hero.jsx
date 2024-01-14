@@ -10,10 +10,10 @@ export default function Hero() {
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
 
   return (
-    <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative min-h-[100vh] -750:min-h-[80vh]">
+    <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative ">
       {/* div containing heading and typography */}
       <div className="flex flex-col max-w-[600px] w-full gap-[50px]">
-        <h1 className="text-6xl -950:text-4xl -500:text-4xl">
+        <h1 className="section-heading leading-[100%]">
           {" "}
           Crafting your dreams together{" "}
         </h1>
@@ -40,9 +40,14 @@ export default function Hero() {
       </div>
 
       <div
-        className={` hero-img-cont max-w-[1000px] w-[90%] bottom-[0%] translate-y-[50%] absolute left-[50%] translate-x-[-50%]`}
+        className={` hero-img-cont max-w-[1000px] w-full translate-y-[10%]  -950:translate-y-[20%] relative max-h-[40vh]  -550:max-h-[22vh] left-[50%]  translate-x-[-50%]`}
       >
-        <ParallaxImg imgSrc={heroImg} imgTrigger=".hero-img-cont" styles="" />
+        <ParallaxImg
+          imgSrc={heroImg}
+          imgTrigger=".hero-img-cont"
+          styles=""
+          imgStyles="object-contain max-h-[75vh] !min-h-[0px]"
+        />
       </div>
     </section>
   );

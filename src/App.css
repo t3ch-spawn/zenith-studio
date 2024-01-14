@@ -6,6 +6,27 @@ main > section {
   padding: 2rem;
 }
 
+@media (max-width: 900px) {
+  main > section {
+    padding: 1rem;
+  }
+}
+
+.section-heading {
+  font-size: 3.75rem;
+}
+
+@media (max-width: 950px) {
+  .section-heading {
+    font-size: 2.25rem;
+  }
+}
+@media (max-width: 400px) {
+  .section-heading {
+    font-size: 2.2rem;
+  }
+}
+
 .hero-arrow-down {
   animation: arrDownMotion 1.5s infinite;
 }

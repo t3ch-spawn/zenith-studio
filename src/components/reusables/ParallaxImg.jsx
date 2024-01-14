@@ -9,7 +9,7 @@ export default function ParallaxImg(props) {
   //   };
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set(imgRef.current, { y: '-30%' });
+    gsap.set(imgRef.current, { y: "-30%" });
 
     gsap.to(imgRef.current, {
       scrollTrigger: {
@@ -17,7 +17,7 @@ export default function ParallaxImg(props) {
         trigger: props.imgTrigger,
         // markers: true,
       },
-      y: '10%',
+      y: "10%",
     });
   }, []);
 
@@ -25,7 +25,7 @@ export default function ParallaxImg(props) {
     <div className={`flex overflow-hidden ${props.styles}`}>
       <img
         ref={imgRef}
-        className="mx-auto scale-[1.15] min-h-[300px] -500:min-h-[250px]"
+        className={`${props.imgStyles} mx-auto scale-[1.15] min-h-[300px] -500:min-h-[250px]`}
         src={props.imgSrc}
         alt=""
       />

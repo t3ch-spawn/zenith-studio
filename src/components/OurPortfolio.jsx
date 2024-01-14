@@ -8,8 +8,8 @@ export default function OurPortfolio() {
   return (
     <div className="bg-grayBg p-4 py-20 flex flex-col gap-16 items-start">
       {/* Container for heading and line */}
-      <div className="flex flex-col text-6xl w-[90%] mx-auto gap-4">
-        <h2 className="text-[#A39E9F]">Our Portfolio</h2>
+      <div className="flex flex-col w-[90%] mx-auto gap-4">
+        <h2 className="text-[#A39E9F] section-heading">Our Portfolio</h2>
         <hr className="w-full bg-[#A39E9F] border-none h-[1px]" />
       </div>
       <PortfolioHelper className="folio-archi" />
