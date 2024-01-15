@@ -32,7 +32,7 @@ export default function Services() {
         rotateY:
           idx == array.length - 1
             ? ""
-            : (idx + 2) % 2 == 1
+            : (idx + 1) % 2 == 1
             ? "24deg"
             : "-24deg",
       });
