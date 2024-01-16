@@ -39,8 +39,10 @@ function PortfolioHelper(props) {
         <ParallaxImg
           imgSrc={interior}
           imgTrigger={`.${props.className}`}
-          imgStyles="object-cover !min-h-[0px]"
-          styles="-550:max-h-[260px]"
+          // imgStyles="object-cover !min-h-[0px]"
+          // styles="-550:max-h-[260px]"
+          imgStyles="-500:!min-h-[250px] -400:min-h-[220px] object-cover"
+          styles="-500:!max-h-[230px] -400:max-h-[200px]"
         />
       </div>
 

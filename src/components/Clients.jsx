@@ -94,7 +94,7 @@ export default function Clients() {
           <ParallaxImg
             imgSrc={parlor}
             imgTrigger=".slider-main-cont"
-            imgStyles="!min-h-[0px] object-cover w-full"
+            imgStyles="object-cover w-full"
           />
 
           {/* Container for the slider */}
