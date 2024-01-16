@@ -87,7 +87,7 @@ export default function News() {
       {/* Container for the all the pictures & CATEGORIES section */}
       <div className="flex items-start justify-between gap-5 w-[90%] mx-auto">
         {/* Container for main picture on the left(that gets pinned)*/}
-        <div className=" main-news kitchen-main w-[50%] max-w-[500px] flex flex-col gap-3">
+        <div className=" main-news kitchen-main w-[50%] max-w-[500px] flex flex-col gap-3 -950:hidden">
           <div className=" news_image_parent overflow-hidden">
             {" "}
             <ParallaxImg
@@ -101,7 +101,20 @@ export default function News() {
         </div>
 
         {/* Container for sub pictures on the right */}
-        <div className="flex flex-col gap-8 sub-news-container">
+        <div className="flex flex-col gap-8 -500:gap-16 sub-news-container">
+          {/* Mobile form of the main picture that is hidden on big screens */}
+          <div className="kitchen-main w-full flex-col gap-3 max-w-[500px] -950:flex hidden">
+            <div className=" news_image_parent overflow-hidden">
+              {" "}
+              <ParallaxImg
+                imgSrc={kitchenMain}
+                imgTrigger=".kitchen-main"
+                styles="news_image_cont"
+              />
+            </div>
+            <p className="text-folioGray text-sm">News</p>
+            <h3 className="text-3xl text-white">KITCHEN STYLE TRENDS 2024</h3>
+          </div>
           {content.map((item) => {
             return (
               <NewsHelper
@@ -120,7 +133,7 @@ export default function News() {
           <div className="flex flex-col items-start text-white gap-7 mt-7">
             <h3 className="text-2xl">CATEGORIES</h3>
 
-            <div className="flex gap-8">
+            <div className="flex gap-8 flex-wrap justify-center">
               {categories.map((category, idx) => {
                 return (
                   <div
@@ -162,10 +175,10 @@ export default function News() {
 function NewsHelper(props) {
   return (
     // Container for each sub picture and content
-    <div className="flex items-center gap-5 h-[1000px] max-h-[200px]">
+    <div className="flex -500:flex-col items-center -500:items-start gap-5">
       {/* Container for sub picture */}
       <div
-        className={`${props.class_name} max-w-[300px] news_image_parent overflow-hidden`}
+        className={`${props.class_name} max-w-[300px] -650:max-w-[150px] -500:max-w-[initial]  news_image_parent overflow-hidden`}
       >
         <ParallaxImg
           imgSrc={props.imgSrc}
@@ -177,9 +190,11 @@ function NewsHelper(props) {
 
       {/* Container for content/description */}
 
-      <div className="flex flex-col items-start h-[90%] justify-around max-w-[300px] text-folioGray">
-        <p className="text-xl">{props.infoType}</p>
-        <h4 className="uppercase text-white text-xl">{props.heading}</h4>
+      <div className="flex flex-col items-start h-[90%] gap-6 justify-around max-w-[300px] text-folioGray">
+        <p className="text-xl -650:text-base">{props.infoType}</p>
+        <h4 className="uppercase text-white text-xl -650:text-base">
+          {props.heading}
+        </h4>
         <div className="flex justify-start gap-3 items-center w-full text-sm text-center">
           <p>{props.date}</p> <hr className="w-[30px]" />{" "}
           <p>{props.readTime}</p>

@@ -12,8 +12,16 @@ export default function OurPortfolio() {
         <h2 className="text-[#A39E9F] section-heading">Our Portfolio</h2>
         <hr className="w-full bg-[#A39E9F] border-none h-[1px] mt-[-1%] " />
       </div>
-      <PortfolioHelper className="folio-archi" />
-      <PortfolioHelper className="folio-interior" />
+      <PortfolioHelper
+        className="folio-archi"
+        imgSrc={archi}
+        heading="House Architectural Design in Trenton, New Jersey"
+      />
+      <PortfolioHelper
+        className="folio-interior"
+        imgSrc={interior}
+        heading="Interior Design in Princeton, New Jersey"
+      />
 
       {/* Container for btns */}
       <div className="flex w-full -550:flex-col justify-center items-center gap-10">
@@ -37,11 +45,11 @@ function PortfolioHelper(props) {
       {/* Image on the left */}
       <div className={`folio-pic-cont ${props.className}`}>
         <ParallaxImg
-          imgSrc={interior}
+          imgSrc={props.imgSrc}
           imgTrigger={`.${props.className}`}
           // imgStyles="object-cover !min-h-[0px]"
           // styles="-550:max-h-[260px]"
-          imgStyles="-500:!min-h-[250px] -400:min-h-[220px] object-cover"
+          imgStyles="-500:!min-h-[250px] -400:min-h-[220px] object-cover h-full"
           styles="-500:!max-h-[230px] -400:max-h-[200px]"
         />
       </div>
@@ -51,9 +59,7 @@ function PortfolioHelper(props) {
         <div className="flex justify-center items-center gap-3 text-folioGray">
           <p>New jersey</p> <hr className="w-[50px]" /> <p>Jan 5, 2024</p>
         </div>
-        <h3 className="text-2xl max-w-[400px]">
-          House Architectural Design in Trenton, New Jersey
-        </h3>
+        <h3 className="text-2xl max-w-[400px]">{props.heading}</h3>
         <div className="cursor-pointer">
           <p>View Project</p>
           <hr className="w-full bg-[#A39E9F] border-none h-[1px]" />

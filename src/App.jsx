@@ -33,7 +33,7 @@ function App() {
         <AbstractImg />
         <OurPortfolio />
         <Clients />
-        {/* <News /> */}
+        <News />
         <div className="min-h-[100vh]"></div>
       </main>
     </Context.Provider>
