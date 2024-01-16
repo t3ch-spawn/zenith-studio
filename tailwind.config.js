@@ -7,6 +7,7 @@ export default {
         grayBg: "#353434",
         grayText: "#f3eeee66",
         folioGray: "#ffffff99",
+        servicesGray: "rgba(163, 158, 159, 0.45)",
       },
 
       screens: {

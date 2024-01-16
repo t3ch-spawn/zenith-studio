@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import AbstractImg from "./components/AbstractImg";
 import OurPortfolio from "./components/OurPortfolio";
 import News from "./components/News";
+import Clients from "./components/Clients";
 
 export const Context = React.createContext();
 
@@ -31,7 +32,8 @@ function App() {
         <Services />
         <AbstractImg />
         <OurPortfolio />
-        <News />
+        <Clients />
+        {/* <News /> */}
         <div className="min-h-[100vh]"></div>
       </main>
     </Context.Provider>

@@ -40,13 +40,13 @@ export default function Hero() {
       </div>
 
       <div
-        className={` hero-img-cont max-w-[1000px] w-full translate-y-[10%]  -950:translate-y-[20%] relative max-h-[40vh]  -550:max-h-[22vh] left-[50%]  translate-x-[-50%]`}
+        className={` hero-img-cont max-w-[1300px] border-[red] border-2 w-full translate-y-[10%]  -950:translate-y-[20%] relative max-h-[40vh]  -550:max-h-[22vh] left-[50%]  translate-x-[-50%]`}
       >
         <ParallaxImg
           imgSrc={heroImg}
           imgTrigger=".hero-img-cont"
-          styles=""
-          imgStyles="object-contain max-h-[75vh] !min-h-[0px]"
+          styles="w-full"
+          imgStyles="object-cover max-h-[75vh] w-full !min-h-[0px]"
         />
       </div>
     </section>

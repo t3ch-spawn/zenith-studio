@@ -8,9 +8,9 @@ export default function OurPortfolio() {
   return (
     <section className="bg-grayBg p-4 py-20 flex flex-col gap-16 items-start">
       {/* Container for heading and line */}
-      <div className="flex flex-col w-[90%] mx-auto gap-4">
+      <div className="flex flex-col w-[90%] mx-auto">
         <h2 className="text-[#A39E9F] section-heading">Our Portfolio</h2>
-        <hr className="w-full bg-[#A39E9F] border-none h-[1px]" />
+        <hr className="w-full bg-[#A39E9F] border-none h-[1px] mt-[-1%] " />
       </div>
       <PortfolioHelper className="folio-archi" />
       <PortfolioHelper className="folio-interior" />
@@ -36,7 +36,12 @@ function PortfolioHelper(props) {
     <div className="flex -950:flex-col -950:items-start justify-between w-[90%] mx-auto items-center gap-10">
       {/* Image on the left */}
       <div className={`folio-pic-cont ${props.className}`}>
-        <ParallaxImg imgSrc={interior} imgTrigger={`.${props.className}`} />
+        <ParallaxImg
+          imgSrc={interior}
+          imgTrigger={`.${props.className}`}
+          imgStyles="object-cover !min-h-[0px]"
+          styles="-550:max-h-[260px]"
+        />
       </div>
 
       {/* Typography on the right */}

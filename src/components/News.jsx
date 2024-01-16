@@ -57,6 +57,8 @@ const content = [
   },
 ];
 
+const categories = ["Resources", "Articles", "News"];
+
 export default function News() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -64,7 +66,7 @@ export default function News() {
     // Scroll trigger that pins the description container on the left
     ScrollTrigger.create({
       trigger: ".sub-news-container",
-    //   markers: true,
+      //   markers: true,
       start: "top 50%",
       animation: gsap.to(".main-news", {
         position: "sticky",
@@ -75,18 +77,25 @@ export default function News() {
 
   return (
     // Container for whole section
-    <section className="flex flex-col items-start gap-16 bg-grayBg relative">
+    <section className="flex flex-col items-start gap-16 bg-grayBg relative py-16">
       {/* Container for heading and line */}
-      <div className="flex flex-col w-[90%] mx-auto gap-4">
+      <div className="flex flex-col w-[90%] mx-auto">
         <h2 className="text-[#A39E9F] section-heading">News & Articles </h2>
-        <hr className="w-full bg-[#A39E9F] border-none h-[1px]" />
+        <hr className="w-full bg-[#A39E9F] border-none h-[1px] mt-[-1%]" />
       </div>
 
-      {/* Container for the all the pictures */}
+      {/* Container for the all the pictures & CATEGORIES section */}
       <div className="flex items-start justify-between gap-5 w-[90%] mx-auto">
         {/* Container for main picture on the left(that gets pinned)*/}
         <div className=" main-news kitchen-main w-[50%] max-w-[500px] flex flex-col gap-3">
-          <ParallaxImg imgSrc={kitchenMain} imgTrigger=".kitchen-main" />
+          <div className=" news_image_parent overflow-hidden">
+            {" "}
+            <ParallaxImg
+              imgSrc={kitchenMain}
+              imgTrigger=".kitchen-main"
+              styles="news_image_cont"
+            />
+          </div>
           <p className="text-folioGray text-sm">News</p>
           <h3 className="text-3xl text-white">KITCHEN STYLE TRENDS 2024</h3>
         </div>
@@ -106,6 +115,44 @@ export default function News() {
               />
             );
           })}
+
+          {/* Container for categories heading and boxes */}
+          <div className="flex flex-col items-start text-white gap-7 mt-7">
+            <h3 className="text-2xl">CATEGORIES</h3>
+
+            <div className="flex gap-8">
+              {categories.map((category, idx) => {
+                return (
+                  <div
+                    key={idx}
+                    className="text-black bg-white p-3 font-[700] cursor-pointer"
+                  >
+                    {category}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Container for input field container */}
+      <div className="w-[90%] mx-auto mt-[100px]">
+        <h3 className="text-2xl text-white mb-12">
+          SUBSCRIBE TO OUR NEWSLETTER
+        </h3>
+
+        {/* container for input field and button */}
+        <div className="flex items-end relative max-w-[500px]">
+          <input
+            type="text"
+            placeholder="Enter your email address"
+            className="subscribe-input border-b-2 relative border-grayText bg-transparent placeholder:text-grayText w-full  focus:outline-none text-white pb-2 pl-2"
+          />
+          <div className="absolute bg-white h-[2px] w-[0px] duration-300 ease-in-out bottom-0 left-0"></div>
+          <button className="text-black bg-white p-3 font-[700] cursor-pointer">
+            Subscribe
+          </button>
         </div>
       </div>
     </section>
@@ -117,12 +164,14 @@ function NewsHelper(props) {
     // Container for each sub picture and content
     <div className="flex items-center gap-5 h-[1000px] max-h-[200px]">
       {/* Container for sub picture */}
-      <div className={`${props.class_name} max-w-[300px]`}>
+      <div
+        className={`${props.class_name} max-w-[300px] news_image_parent overflow-hidden`}
+      >
         <ParallaxImg
           imgSrc={props.imgSrc}
           imgTrigger={`.${props.class_name}`}
           imgStyles="!min-h-[220px] object-cover"
-          styles="!max-h-[200px]"
+          styles="!max-h-[200px] news_image_cont"
         />
       </div>
 

@@ -87,16 +87,17 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="services-section flex flex-col gap-10 mt-[30%] -550:mt-[35%] z-[15] relative"
+      className="services-section flex flex-col gap-10 mt-[30%] -550:mt-[35%] z-[15] relative bg-[#F3EEEE]"
     >
       <h2 className="text-6xl -950:text-3xl">
         <span className="max-w-[500px] hidden -400:block  -400:!text-3xl">
-          Services <br /> Our process is casual and conversational
+          <span className="text-folioGray">Services</span> <br /> Our process is
+          casual and conversational
           <hr className="services-lines" />
         </span>
 
         <div className="-400:hidden">
-          <span className="w-full relative">
+          <span className="w-full relative text-servicesGray">
             Services
             <hr className="services-lines" />
           </span>
