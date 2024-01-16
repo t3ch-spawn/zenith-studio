@@ -91,7 +91,7 @@ export default function Services() {
     >
       <h2 className="text-6xl -950:text-3xl">
         <span className="max-w-[500px] hidden -400:block  -400:!text-3xl">
-          <span className="text-folioGray">Services</span> <br /> Our process is
+          <span className="text-servicesGray">Services</span> <br /> Our process is
           casual and conversational
           <hr className="services-lines" />
         </span>

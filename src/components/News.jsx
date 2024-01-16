@@ -130,7 +130,7 @@ export default function News() {
           })}
 
           {/* Container for categories heading and boxes */}
-          <div className="flex flex-col items-start text-white gap-7 mt-7">
+          <div className="flex flex-col items-start text-white gap-7 mt-7 categories-cont">
             <h3 className="text-2xl">CATEGORIES</h3>
 
             <div className="flex gap-8 flex-wrap justify-center">
@@ -150,7 +150,7 @@ export default function News() {
       </div>
 
       {/* Container for input field container */}
-      <div className="w-[90%] mx-auto mt-[100px]">
+      <div className="w-[90%] mx-auto mt-[100px] subscribe-container">
         <h3 className="text-2xl text-white mb-12">
           SUBSCRIBE TO OUR NEWSLETTER
         </h3>

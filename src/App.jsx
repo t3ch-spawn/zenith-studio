@@ -7,6 +7,7 @@ import AbstractImg from "./components/AbstractImg";
 import OurPortfolio from "./components/OurPortfolio";
 import News from "./components/News";
 import Clients from "./components/Clients";
+import TogetherMarque from "./components/TogetherMarque";
 
 export const Context = React.createContext();
 
@@ -34,6 +35,8 @@ function App() {
         <OurPortfolio />
         <Clients />
         <News />
+        <TogetherMarque />
+        <div className="min-h-[100vh]"></div>
       </main>
     </Context.Provider>
   );
