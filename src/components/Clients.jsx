@@ -40,20 +40,21 @@ export default function Clients() {
     const allSlides = gsap.utils.toArray(".slide");
 
     allSlides.forEach((slide, idx) => {
-      gsap.set(slide, { x: `${idx * 100}%`, y: 0 });
+      gsap.set(slide, { x: `${idx * 100}%`, y: 0, scale: 0.5 });
     });
   }, []);
 
   useEffect(() => {
     const allSlides = gsap.utils.toArray(".slide");
 
-    gsap.to(".slide-container", {
+    gsap.timeline().to(".slide-container", {
       x: `-${currSlide * 100}%`,
     });
 
     allSlides.forEach((slide, idx) => {
       gsap.to(slide, {
         opacity: idx == currSlide ? 1 : 0,
+        scale: idx == currSlide ? 1 : 0.4,
       });
     });
   }, [currSlide]);
@@ -90,7 +91,7 @@ export default function Clients() {
 
       {/* Container for image and slider */}
       <div className="slider-main-cont w-[90%] -550:w-full mx-auto">
-        <div className="relative max-w-[800px] w-[70%] max-h-[85vh] -950:w-full mt-[32%] -950:mt-[300px] -550:mt-[250px]">
+        <div className="relative max-w-[800px] w-[70%] max-h-[85vh] -950:w-full -950:mt-[300px] -550:mt-[250px]">
           <ParallaxImg
             imgSrc={parlor}
             imgTrigger=".slider-main-cont"

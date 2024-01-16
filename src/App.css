@@ -107,3 +107,21 @@ main > section {
     transform: scale(1);
   }
 }
+
+.black_bubble {
+  transition: 0.3s ease-in-out;
+  transform: scale(0);
+}
+
+.footer_link:hover .black_bubble {
+  transform: scale(1);
+}
+
+.black_line {
+  transition: 0.3s ease-in-out;
+  transform: scaleX(0);
+}
+
+.footer_link:hover .black_line {
+  transform: scaleX(1);
+}
