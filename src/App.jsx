@@ -34,7 +34,6 @@ function App() {
         <OurPortfolio />
         <Clients />
         <News />
-        <div className="min-h-[100vh]"></div>
       </main>
     </Context.Provider>
   );
