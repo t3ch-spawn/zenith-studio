@@ -64,7 +64,7 @@ main > section {
 }
 
 .teststubwiuf {
-  color: #ffffff99
+  color: #ffffff99;
 }
 
 .service-div {
@@ -87,5 +87,13 @@ main > section {
 }
 
 .subscribe-input:focus + div {
-  width: 100%
+  width: 100%;
+}
+
+.slider-arr{
+  transition: 0.3s ease-in-out;
+}
+
+.slider-arr.active {
+  transform: scale(0.8);
 }

@@ -132,22 +132,43 @@ export default function Clients() {
 
             {/* Container for left and right arrow */}
             <div className="flex gap-4 items-center justify-center cursor-pointer">
-              <div
-                className="-750:w-[60px]"
+              <img
                 onClick={() => {
                   moveSlide("left");
                 }}
-              >
-                <img src={left} alt="" />
-              </div>
-              <div
-                className="-750:w-[60px]"
-                onClick={() => {
+                className="-750:w-[60px] slider-arr"
+                src={left}
+                alt=""
+                onMouseDown={(e) => {
+                  e.target.classList.add("active");
+                  console.log(e.target);
+                }}
+                onMouseUp={(e) => {
+                  e.target.classList.remove("active");
+                }}
+                onMouseLeave={(e) => {
+                  e.target.classList.remove("active");
+                }}
+              />
+
+              <img
+                className="-750:w-[60px] slider-arr"
+                src={right}
+                alt=""
+                onClick={(e) => {
                   moveSlide("right");
                 }}
-              >
-                <img src={right} alt="" />
-              </div>
+                onMouseDown={(e) => {
+                  e.target.classList.add("active");
+                  console.log(e.target);
+                }}
+                onMouseUp={(e) => {
+                  e.target.classList.remove("active");
+                }}
+                onMouseLeave={(e) => {
+                  e.target.classList.remove("active");
+                }}
+              />
             </div>
           </div>
         </div>
