@@ -133,22 +133,16 @@ export default function Clients() {
             {/* Container for left and right arrow */}
             <div className="flex gap-4 items-center justify-center cursor-pointer">
               <img
-                onClick={() => {
+                onClick={(e) => {
                   moveSlide("left");
+                  e.target.classList.add("active");
+                  setTimeout(() => {
+                    e.target.classList.remove("active");
+                  }, 300);
                 }}
                 className="-750:w-[60px] slider-arr"
                 src={left}
                 alt=""
-                onMouseDown={(e) => {
-                  e.target.classList.add("active");
-                  console.log(e.target);
-                }}
-                onMouseUp={(e) => {
-                  e.target.classList.remove("active");
-                }}
-                onMouseLeave={(e) => {
-                  e.target.classList.remove("active");
-                }}
               />
 
               <img
@@ -157,16 +151,11 @@ export default function Clients() {
                 alt=""
                 onClick={(e) => {
                   moveSlide("right");
-                }}
-                onMouseDown={(e) => {
                   e.target.classList.add("active");
-                  console.log(e.target);
-                }}
-                onMouseUp={(e) => {
-                  e.target.classList.remove("active");
-                }}
-                onMouseLeave={(e) => {
-                  e.target.classList.remove("active");
+                  setTimeout(() => {
+                    e.target.classList.remove("active");
+                  }, 300);
+                  //   console.log(e)
                 }}
               />
             </div>

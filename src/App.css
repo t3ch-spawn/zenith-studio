@@ -90,10 +90,20 @@ main > section {
   width: 100%;
 }
 
-.slider-arr{
-  transition: 0.3s ease-in-out;
+.slider-arr.active {
+  animation: btnScale 0.3s ease-in-out;
 }
 
-.slider-arr.active {
-  transform: scale(0.8);
+@keyframes btnScale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
