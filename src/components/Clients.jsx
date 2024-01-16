@@ -90,7 +90,7 @@ export default function Clients() {
 
       {/* Container for image and slider */}
       <div className="slider-main-cont w-[90%] -550:w-full mx-auto">
-        <div className="relative max-w-[800px] w-[70%] max-h-[85vh] -950:w-full mt-[32%] -950:mt-[300px]">
+        <div className="relative max-w-[800px] w-[70%] max-h-[85vh] -950:w-full mt-[32%] -950:mt-[300px] -550:mt-[250px]">
           <ParallaxImg
             imgSrc={parlor}
             imgTrigger=".slider-main-cont"
