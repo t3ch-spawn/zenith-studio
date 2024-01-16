@@ -6,23 +6,17 @@ import contact from "../assets/footer_contact.jpeg";
 import journal from "../assets/footer_journal.jpeg";
 import team from "../assets/footer_team.jpeg";
 import work from "../assets/footer_work.jpeg";
-import interior from "../assets/folio-interior.jpeg";
+import main from "../assets/footer_main.jpeg";
 
 const footer_links = ["About", "Team", "Work", "Journal", "Contact"];
 const footer_imgs = [about, team, work, journal, contact];
 
 export default function Footer() {
   useEffect(() => {
-    const footerImgs = gsap.utils.toArray(".footer_image");
-
-    footerImgs.forEach((image, idx) => {
-      gsap.set(image, {
-        y: "100%",
-      });
-    });
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.set(".footer", { y: "100%" });
+    // Animation for the reveal of the footer
+    gsap.set(".footer", { y: "-100%" });
 
     ScrollTrigger.create({
       trigger: ".marque-container",
@@ -31,6 +25,14 @@ export default function Footer() {
       animation: gsap.to(".footer", {
         y: 0,
       }),
+    });
+
+    // Animation that sets all the footer images to translate y on page load
+    const footerImgs = gsap.utils.toArray(".footer_image");
+    footerImgs.forEach((image, idx) => {
+      gsap.set(image, {
+        y: "100%",
+      });
     });
   }, []);
   function scaleImage(e) {
@@ -41,23 +43,29 @@ export default function Footer() {
     footerImgs.forEach((image, idx) => {
       gsap.to(image, {
         y: idx == imgIdx ? "0%" : "100%",
+        x: 0,
         ease: "power3.inOut",
         duration: 0.8,
       });
     });
-    // gsap.to(footerImgs[imgIdx], {
-    //   y: 1,
-    // });
   }
 
-  function scaleImageDown() {
+  function scaleImageDown(e) {
     const footerImgs = gsap.utils.toArray(".footer_image");
-
+    const word = e.currentTarget.querySelector(".footer_word").textContent;
+    const imgIdx = footer_links.indexOf(word);
     footerImgs.forEach((image, idx) => {
       gsap.to(image, {
-        y: "100%",
+        y: idx == imgIdx ? "-120%" : "100%",
         ease: "power3.inOut",
         duration: 0.8,
+        onComplete: () => {
+          gsap.to(image, {
+            x: idx == imgIdx ? "0%" : "0%",
+            y: idx == imgIdx ? "100%" : "100%",
+            duration: 0,
+          });
+        },
       });
     });
   }
@@ -65,8 +73,12 @@ export default function Footer() {
     <section className=" bg-[white] footer relative z-[8] flex justify-between w-[90%] min-h-[80vh] items-center">
       {/* Container for the pictures and socials */}
 
-      <div className="relative w-full overflow-hidden">
-        <img src={about} className="max-w-[250px] h-full" alt="" />
+      <div className="relative w-fit overflow-hidden">
+        <img
+          src={main}
+          className="max-w-[250px] h-full footer_image-main"
+          alt=""
+        />
         {footer_imgs.map((image) => {
           return (
             <img
