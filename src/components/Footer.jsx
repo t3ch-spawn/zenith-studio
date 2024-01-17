@@ -80,9 +80,9 @@ export default function Footer() {
     <section className=" bg-[white] footer relative z-[8] flex justify-between w-[90%] mx-auto min-h-[70vh] items-center -850:flex-col -850:items-start -850:gap-16">
       {/* Container for the pictures and socials */}
 
-      <div className="flex flex-col gap-8 items-start">
+      <div className="flex flex-col gap-8 items-start -850:items-center -850:w-full -850:justify-center">
         {/* Container for pictures */}
-        <div className="relative w-full overflow-hidden flex flex-col">
+        <div className="relative w-full overflow-hidden flex flex-col -850:items-center">
           <img
             src={main}
             className="max-w-[250px] h-full w-full footer_image-main"
@@ -100,8 +100,8 @@ export default function Footer() {
           })}
         </div>
 
-        {/* Container for the social icons */}
-        <div className="flex gap-4 items-center justify-center">
+        {/* Container for the social icons only shown on desktop*/}
+        <div className="flex gap-4 items-center justify-center -850:hidden">
           {icons.map((icon, idx) => {
             return <img key={idx} src={icon} alt="" />;
           })}
@@ -143,6 +143,13 @@ export default function Footer() {
               </div>
             </div>
           );
+        })}
+      </div>
+
+      {/* Container for the social icons only shown on mobile*/}
+    <div className="hidden gap-4 items-center justify-center w-full -850:flex">
+        {icons.map((icon, idx) => {
+          return <img key={idx} src={icon} alt="" />;
         })}
       </div>
     </section>

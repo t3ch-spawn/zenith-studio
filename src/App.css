@@ -125,3 +125,11 @@ main > section {
 .footer_link:hover .black_line {
   transform: scaleX(1);
 }
+
+.marque{
+  white-space: nowrap;
+}
+
+/* .custom-cursor{
+  mix-blend-mode: difference;
+} */

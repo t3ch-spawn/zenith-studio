@@ -9,6 +9,7 @@ import News from "./components/News";
 import Clients from "./components/Clients";
 import TogetherMarque from "./components/TogetherMarque";
 import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 export const Context = React.createContext();
 
@@ -29,7 +30,8 @@ function App() {
 
   return (
     <Context.Provider value={[heroImgHeight, setHeroImgHeight]}>
-      <main>
+      <main className="relative">
+        {/* <CustomCursor/> */}
         <Hero />
         <Services />
         <AbstractImg />
@@ -38,7 +40,7 @@ function App() {
         <News />
         <TogetherMarque />
         <Footer/>
-      </main>
+        </main>
     </Context.Provider>
   );
 }
