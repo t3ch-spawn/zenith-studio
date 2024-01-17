@@ -87,7 +87,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="services-section flex flex-col gap-10 mt-[30%] -550:mt-[35%] z-[15] relative bg-[#F3EEEE]"
+      className="services-section flex flex-col gap-10 pt-[30%] -550:pt-[35%] z-[15] relative bg-[#F3EEEE]"
     >
       <h2 className="text-6xl -950:text-3xl">
         <span className="max-w-[500px] hidden -400:block  -400:!text-3xl">

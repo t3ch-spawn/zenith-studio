@@ -31,7 +31,7 @@ function App() {
   return (
     <Context.Provider value={[heroImgHeight, setHeroImgHeight]}>
       <main className="relative">
-        {/* <CustomCursor/> */}
+        <CustomCursor/>
         <Hero />
         <Services />
         <AbstractImg />

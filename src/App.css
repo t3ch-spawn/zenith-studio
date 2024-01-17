@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  cursor: none;
+}
+
 main > section {
   padding: 2rem;
 }
@@ -126,10 +130,16 @@ main > section {
   transform: scaleX(1);
 }
 
-.marque{
+.marque {
   white-space: nowrap;
 }
 
-/* .custom-cursor{
+.custom-cursor {
   mix-blend-mode: difference;
-} */
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+
+.cursor-dot{
+  mix-blend-mode: difference;
+}
