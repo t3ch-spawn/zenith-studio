@@ -12,10 +12,10 @@ export default function Hero() {
   return (
     <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative ">
       {/* div containing heading and typography */}
-      <div className="flex flex-col max-w-[600px] w-full gap-[50px]">
-        <h1 className="section-heading leading-[100%]">
+      <div className="flex flex-col max-w-[1000px] w-full gap-[50px]">
+        <h1 className="hero-heading text-8xl leading-[100%]">
           {" "}
-          Crafting your dreams together{" "}
+          Crafting your dreams together.{" "}
         </h1>
         <p>Unveiling your vision: where dreams and craftmanship converge </p>
       </div>
@@ -25,7 +25,10 @@ export default function Hero() {
       {/* div containing the buttons */}
       <div className="justify-between flex">
         {/* Get in touch btn */}
-        <GetInTouch phrase="Get in touch" styles="-500:w-[90%] -500:mx-auto -400:w-full"/>
+        <GetInTouch
+          phrase="Get in touch"
+          styles="-500:w-[90%] -500:mx-auto -400:w-full"
+        />
         {/* Scroll down btn */}
         <a href="#services" className="flex items-center gap-2 -550:hidden">
           Scroll down
@@ -40,7 +43,7 @@ export default function Hero() {
       </div>
 
       <div
-        className={` hero-img-cont max-w-[1300px] border-[red] border-2 w-full translate-y-[10%] z-[20] -950:translate-y-[20%] relative max-h-[40vh]  -550:max-h-[22vh] left-[50%]  translate-x-[-50%]`}
+        className={` hero-img-cont max-w-[1300px] w-full translate-y-[10%] z-[20] -950:translate-y-[20%] relative max-h-[40vh] -550:translate-y-[22%]  -550:max-h-[22vh] left-[50%]  translate-x-[-50%]`}
       >
         <ParallaxImg
           imgSrc={heroImg}

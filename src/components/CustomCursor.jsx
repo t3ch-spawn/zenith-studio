@@ -13,7 +13,11 @@ export default function CustomCursor() {
           left: e.clientX + "px",
           top: e.clientY + "px",
         },
-        { duration: 300, fill: "forwards" }
+        {
+          duration: 700,
+          fill: "forwards",
+          easing: "cubic-bezier(.57,.65,0,1.27)",
+        }
       );
     });
 

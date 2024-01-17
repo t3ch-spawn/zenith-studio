@@ -24,9 +24,15 @@ main > section {
   .section-heading {
     font-size: 2.25rem;
   }
+  .hero-heading {
+    font-size: 2.7rem;
+  }
 }
 @media (max-width: 400px) {
   .section-heading {
+    font-size: 2.2rem;
+  }
+  .hero-heading {
     font-size: 2.2rem;
   }
 }
@@ -136,10 +142,29 @@ main > section {
 
 .custom-cursor {
   mix-blend-mode: difference;
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
 }
 
-
-.cursor-dot{
+.cursor-dot {
   mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    cursor: auto;
+  }
+
+  .custom-cursor,
+  .cursor-dot {
+    display: none;
+  }
 }
