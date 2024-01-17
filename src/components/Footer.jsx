@@ -37,6 +37,7 @@ export default function Footer() {
     footerImgs.forEach((image, idx) => {
       gsap.set(image, {
         y: "100%",
+        opacity: 1,
       });
     });
   }, []);
@@ -49,8 +50,8 @@ export default function Footer() {
       gsap.to(image, {
         y: idx == imgIdx ? "0%" : "100%",
         x: 0,
-        ease: "power3.inOut",
-        duration: 0.8,
+        ease: "power4.out",
+        duration: 0.5,
       });
     });
   }
@@ -61,9 +62,10 @@ export default function Footer() {
     const imgIdx = footer_links.indexOf(word);
     footerImgs.forEach((image, idx) => {
       gsap.to(image, {
-        y: idx == imgIdx ? "-120%" : "100%",
-        ease: "power3.inOut",
-        duration: 0.8,
+        y: idx == imgIdx ? "-100%" : "100%",
+        ease: "power4.out",
+        duration: 0.5,
+        // opacity: 0,
         onComplete: () => {
           gsap.to(image, {
             x: idx == imgIdx ? "0%" : "0%",
@@ -92,7 +94,7 @@ export default function Footer() {
                 key={idx}
                 src={image}
                 alt=""
-                className="w-full max-w-[250px] h-full absolute top-0 footer_image origin-bottom"
+                className={`w-full max-w-[250px] h-full absolute top-0 footer_image origin-bottom`}
               />
             );
           })}
@@ -118,7 +120,9 @@ export default function Footer() {
             >
               {/* Container on top of line that has the word and bubble */}
               <div className="flex justify-between items-end">
-                <p className="text-6xl -550:text-3xl font-base footer_word">{item}</p>
+                <p className="text-6xl -550:text-3xl font-base footer_word">
+                  {item}
+                </p>
 
                 <div className="bg-[#C2BEBE] p-5 h-[20px] w-[20px] flex justify-center items-center rounded-[50%] text-white relative">
                   <p className="relative z-[5]"> {item.slice(0, 1)}</p>
