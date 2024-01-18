@@ -102,10 +102,15 @@ export default function Header() {
         {/* Container for social icons and location */}
         <div className="flex justify-between w-full px-10 overflow-hidden -750:flex-col gap-8 -550:px-6">
           {/* Container for social icons*/}
-          <div className="flex gap-4 items-center justify-center nav_link1-cont translate-y-[100%]">
+          <div className="flex gap-4 items-center justify-center overflow-hidden ">
             {icons.map((icon, idx) => {
               return (
-                <img className="cursor-pointer" key={idx} src={icon} alt="" />
+                <img
+                  className="cursor-pointer nav_link1-cont translate-y-[100%]"
+                  key={idx}
+                  src={icon}
+                  alt=""
+                />
               );
             })}
           </div>
