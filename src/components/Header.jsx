@@ -49,14 +49,14 @@ export default function Header() {
     setBurgerClicked(!burgerClicked);
   }
   return (
-    <nav className="bg-grayBg flex w-full sticky top-0 z-[80] shadow-md px-10 py-4 nav-cont">
+    <nav className="bg-grayBg flex w-full sticky top-0 z-[80] shadow-md px-10 -850:px-5 py-4 nav-cont">
       {/* Container for everything */}
       <div className="flex justify-between w-[100%] mx-auto">
         {/* icon */}
         <img src={icon} className="z-[110]" alt="" />
 
         {/* Container for hamburger and icon */}
-        <div className="flex items-center justify-center gap-10">
+        <div className="flex items-center justify-center gap-10 -550:gap-6">
           <img src={cart} className="max-w-[25px] cursor-pointer" alt="" />
           {/* Container for hamburger */}
           <div
