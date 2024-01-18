@@ -2,6 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import icon from "../assets/icon.svg";
 import cart from "../assets/cart.svg";
 import gsap from "gsap";
+import linkedIn from "../assets/nav-linkedIn.svg";
+import twitter from "../assets/nav-twitter.svg";
+import youtube from "../assets/nav-youtube.svg";
+import instagram from "../assets/nav-instagram.svg";
+import location from "../assets/location.svg";
+const icons = [linkedIn, twitter, youtube, instagram];
 
 const nav_links = ["Home", "About", "Services", "Journal", "Contact"];
 export default function Header() {
@@ -29,18 +35,25 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    burgerClicked ? animation.current.play() : animation.current.reverse();
+    const body = document.querySelector("body");
+    if (burgerClicked) {
+      animation.current.play();
+      body.classList.add("inactive");
+    } else {
+      animation.current.reverse();
+      body.classList.remove("inactive");
+    }
   }, [burgerClicked]);
 
   function handleNav() {
     setBurgerClicked(!burgerClicked);
   }
   return (
-    <nav className="bg-grayBg flex w-full sticky top-0 z-[80] shadow-md px-10 py-4">
+    <nav className="bg-grayBg flex w-full sticky top-0 z-[80] shadow-md px-10 py-4 nav-cont">
       {/* Container for everything */}
       <div className="flex justify-between w-[100%] mx-auto">
         {/* icon */}
-        <img src={icon} alt="" />
+        <img src={icon} className="z-[110]" alt="" />
 
         {/* Container for hamburger and icon */}
         <div className="flex items-center justify-center gap-10">
@@ -60,7 +73,7 @@ export default function Header() {
 
       {/* Overlay that shows navigation */}
       <div
-        className={`bg-grayBg flex flex-col items-center justify-center fixed top-0 left-0 h-[100%] scale-y-0  pointer-events-none w-full z-[100] nav-main ${
+        className={`bg-grayBg flex flex-col items-center justify-center gap-10 -950:gap-16 fixed top-0 left-0 h-[100%] scale-y-0  pointer-events-none w-full z-[100] nav-main ${
           burgerClicked ? "active" : ""
         }`}
       >
@@ -73,7 +86,7 @@ export default function Header() {
                 className="text-8xl -950:text-5xl -550:text-3xl  text-white relative overflow-hidden cursor-pointer uppercase nav_link-cont"
               >
                 <div className="nav_link1-cont flex translate-y-[-100%]">
-                  <p className="text-white text-sm relative left-[4px] top-[7px]">
+                  <p className="text-white text-sm -550:text-xs relative left-[1px] top-[7px] -950:top-[0px] -550:left-[0px]">
                     0{idx + 1}
                   </p>
                   <p className="nav_link-1 ">{link}</p>
@@ -87,7 +100,21 @@ export default function Header() {
         </div>
 
         {/* Container for social icons and location */}
-        <div></div>
+        <div className="flex justify-between w-full px-10 overflow-hidden -750:flex-col gap-8 -550:px-6">
+          {/* Container for social icons*/}
+          <div className="flex gap-4 items-center justify-center nav_link1-cont translate-y-[100%]">
+            {icons.map((icon, idx) => {
+              return (
+                <img className="cursor-pointer" key={idx} src={icon} alt="" />
+              );
+            })}
+          </div>
+
+          <div className="text-white flex justify-center items-center gap-3 nav_link1-cont translate-y-[100%] text-center -400:text-sm">
+            <img src={location} alt="" />
+            <p>PRINCETON, NEW JERSEY</p>
+          </div>
+        </div>
       </div>
     </nav>
   );
