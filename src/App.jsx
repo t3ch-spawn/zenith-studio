@@ -10,6 +10,7 @@ import Clients from "./components/Clients";
 import TogetherMarque from "./components/TogetherMarque";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
+import Header from "./components/Header";
 
 export const Context = React.createContext();
 
@@ -31,7 +32,8 @@ function App() {
   return (
     <Context.Provider value={[heroImgHeight, setHeroImgHeight]}>
       <main className="relative">
-        <CustomCursor/>
+        <CustomCursor />
+        <Header />
         <Hero />
         <Services />
         <AbstractImg />
@@ -39,8 +41,8 @@ function App() {
         <Clients />
         <News />
         <TogetherMarque />
-        <Footer/>
-        </main>
+        <Footer />
+      </main>
     </Context.Provider>
   );
 }

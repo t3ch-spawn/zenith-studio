@@ -16,7 +16,6 @@ export default function CustomCursor() {
         {
           duration: 700,
           fill: "forwards",
-          easing: "cubic-bezier(.57,.65,0,1.27)",
         }
       );
     });
@@ -29,9 +28,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div className="custom-cursor fixed bg-white h-[20px] w-[20px] translate-x-[-50%] translate-y-[-50%]  z-[40] pointer-events-none"></div>
+      <div className="custom-cursor fixed bg-white h-[20px] w-[20px] translate-x-[-50%] translate-y-[-50%]  z-[140] pointer-events-none"></div>
 
-      <div className="cursor-dot h-[5px] w-[5px] fixed bg-white rounded-[50%] pointer-events-none z-[45] translate-x-[-50%] translate-y-[-50%]"></div>
+      <div className="cursor-dot h-[5px] w-[5px] fixed bg-white rounded-[50%] pointer-events-none z-[145] translate-x-[-50%] translate-y-[-50%]"></div>
     </>
   );
 }

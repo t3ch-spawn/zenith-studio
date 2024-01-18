@@ -27,7 +27,7 @@ export default function OurPortfolio() {
       <div className="flex w-full -550:flex-col justify-center items-center gap-10">
         <GetInTouch
           phrase="Get in touch"
-          styles="w-full max-w-[280px] -550:max-w-[400px]"
+          styles="w-full max-w-[280px] -550:max-w-[400px] !justify-between !px-5"
         />
         <GetInTouch
           phrase="Browse portfolio"
@@ -43,14 +43,14 @@ function PortfolioHelper(props) {
   return (
     <div className="flex -950:flex-col -950:items-start justify-between w-[90%] mx-auto items-center gap-10">
       {/* Image on the left */}
-      <div className={`folio-pic-cont ${props.className}`}>
+      <div className={`folio-pic-cont overflow-hidden ${props.className}`}>
         <ParallaxImg
           imgSrc={props.imgSrc}
           imgTrigger={`.${props.className}`}
           // imgStyles="object-cover !min-h-[0px]"
           // styles="-550:max-h-[260px]"
           imgStyles="-500:!min-h-[250px] -400:min-h-[220px] object-cover h-full"
-          styles="-500:!max-h-[230px] -400:max-h-[200px]"
+          styles="-500:!max-h-[230px] -400:max-h-[200px] folio-pic-cont2"
         />
       </div>
 

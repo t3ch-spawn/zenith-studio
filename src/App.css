@@ -88,12 +88,22 @@ main > section {
   perspective: 100vw;
 }
 
+/* Styling for hovering on the pictures in the news section */
 .news_image_cont {
   transition: 0.4s ease-in-out;
 }
 
 .news_image_parent:hover .news_image_cont {
   transform: scale(1.3) rotate(10deg);
+}
+
+/* Styling for hovering on the pictures in portfolio section */
+.folio-pic-cont2 {
+  transition: 0.4s ease-in-out;
+}
+
+.folio-pic-cont:hover .folio-pic-cont2 {
+  transform: scale(1.2);
 }
 
 .subscribe-input:focus + div {
@@ -166,5 +176,104 @@ main > section {
   .custom-cursor,
   .cursor-dot {
     display: none;
+  }
+}
+
+/* Animation for navigation */
+.nav_link-1,
+.nav_link-2 {
+  transition: 0.8s cubic-bezier(0.38, 0.77, 0, 1.01);
+}
+
+.nav_link-cont:hover .nav_link-1 {
+  transform: translateY(-100%);
+}
+.nav_link-cont:hover .nav_link-2 {
+  transform: translateY(0%);
+}
+
+.nav-main.active {
+  pointer-events: all;
+}
+
+/* Styling which includes the animation for the burger */
+.burger.active .line-1 {
+  animation: line-1_forward 1s forwards;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.burger.active .line-2 {
+  animation: line-2_forward 1s forwards;
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.burger.inactive .line-1 {
+  animation: line-1_backward 1s forwards;
+}
+
+.burger.inactive .line-2 {
+  animation: line-2_backward 1s forwards;
+}
+
+@keyframes line-1_forward {
+  0% {
+    transform: translateY(-4px) translateX(0px);
+  }
+
+  40% {
+    transform: translateY(-4px) translateX(-50px);
+  }
+
+  50% {
+    transform: translateY(-25px) translateX(-25px) rotate(45deg);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(45deg);
+  }
+}
+@keyframes line-2_forward {
+  0% {
+    transform: translateY(4px) translateX(0px);
+  }
+
+  40% {
+    transform: translateY(4px) translateX(50px);
+  }
+
+  70% {
+    transform: translateY(-25px) translateX(25px) rotate(135deg);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(135deg);
+  }
+}
+
+@keyframes line-1_backward {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-4px) translateX(0px) rotate(0deg);
+  }
+}
+@keyframes line-2_backward {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(135deg);
+  }
+
+  50% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(4px) translateX(0px) rotate(0deg);
   }
 }
