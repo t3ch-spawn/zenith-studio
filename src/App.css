@@ -324,3 +324,13 @@ main > section {
     transform: translateY(4px) translateX(0px) rotate(0deg);
   }
 }
+
+/* Animation for marque container */
+.marque {
+  transition: 0.4s ease-in-out;
+  opacity: 0.5;
+}
+
+.marque-container:hover .marque {
+  opacity: 1;
+}

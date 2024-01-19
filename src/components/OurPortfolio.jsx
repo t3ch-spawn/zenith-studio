@@ -27,7 +27,7 @@ export default function OurPortfolio() {
       <div className="flex w-full -550:flex-col justify-center items-center gap-10">
         <GetInTouch
           phrase="Get in touch"
-          styles="w-full max-w-[280px] -550:max-w-[300px]  !px-5"
+          styles="w-full max-w-[280px] -550:max-w-[300px] !justify-between -550:!justify-center !px-5"
         />
         <GetInTouch
           phrase="Browse portfolio"

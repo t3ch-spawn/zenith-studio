@@ -17,7 +17,9 @@ export default function Hero() {
           {" "}
           Crafting your dreams together.{" "}
         </h1>
-        <p className="font-normal text-2xl">Unveiling your vision: where dreams and craftmanship converge </p>
+        <p className="font-normal text-2xl -550:text-xl">
+          Unveiling your vision: where dreams and craftmanship converge{" "}
+        </p>
       </div>
 
       <hr className="border-none bg-white h-[1px]" />
@@ -43,13 +45,13 @@ export default function Hero() {
       </div>
 
       <div
-        className={` hero-img-cont max-w-[1300px] w-full translate-y-[10%] z-[20] -950:translate-y-[20%] relative max-h-[40vh] -550:translate-y-[22%]  -550:max-h-[22vh] left-[50%]  translate-x-[-50%]`}
+        className={` hero-img-cont max-w-[1300px] mb-16 w-full translate-y-[10%] z-[20] -950:translate-y-[10%] -750:translate-y-[30%] relative max-h-[40vh] -550:translate-y-[50%] left-[50%]  translate-x-[-50%]`}
       >
         <ParallaxImg
           imgSrc={heroImg}
           imgTrigger=".hero-img-cont"
           styles="w-full"
-          imgStyles="object-cover max-h-[75vh] w-full !min-h-[0px]"
+          imgStyles="object-cover max-h-[90vh] w-full !min-h-[0px]"
         />
       </div>
     </section>
