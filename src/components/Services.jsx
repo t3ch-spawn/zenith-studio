@@ -89,10 +89,10 @@ export default function Services() {
       id="services"
       className="services-section flex flex-col gap-10 pt-[30%] -550:pt-[35%] z-[15] relative bg-[#F3EEEE]"
     >
-      <h2 className="text-6xl -950:text-3xl">
+      <h2 className="text-6xl -950:text-3xl font-medium">
         <span className="max-w-[500px] hidden -400:block  -400:!text-3xl">
-          <span className="text-servicesGray">Services</span> <br /> Our process is
-          casual and conversational
+          <span className="text-servicesGray">Services</span> <br /> Our process
+          is casual and conversational
           <hr className="services-lines" />
         </span>
 
@@ -192,9 +192,10 @@ export default function Services() {
 
 function DescriptionHelper(props) {
   return (
-    <div className="w-full description-div">
+    <div className="w-full description-div text-xl">
       <div className="flex gap-10">
-        <p className="italic">{props.number}</p> <p>{props.descrip}</p>
+        <p className="italic font-light">{props.number}</p>{" "}
+        <p className="font-medium">{props.descrip}</p>
       </div>
       <div className="description-line relative" />
     </div>

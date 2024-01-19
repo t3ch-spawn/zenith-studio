@@ -13,11 +13,11 @@ export default function Hero() {
     <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative ">
       {/* div containing heading and typography */}
       <div className="flex flex-col max-w-[1000px] w-full gap-[50px]">
-        <h1 className="hero-heading text-8xl leading-[100%]">
+        <h1 className="hero-heading text-8xl leading-[100%] font-medium">
           {" "}
           Crafting your dreams together.{" "}
         </h1>
-        <p>Unveiling your vision: where dreams and craftmanship converge </p>
+        <p className="font-normal text-2xl">Unveiling your vision: where dreams and craftmanship converge </p>
       </div>
 
       <hr className="border-none bg-white h-[1px]" />

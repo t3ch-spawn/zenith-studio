@@ -77,7 +77,7 @@ export default function Footer() {
     });
   }
   return (
-    <section className=" bg-[#F3EEEE] footer relative z-[8] flex justify-between w-[100%] mx-auto min-h-[70vh] items-center ">
+    <section className=" bg-[#F3EEEE] footer relative z-[8] flex justify-between w-[100%] mx-auto min-h-[70vh] items-center pt-[100px]">
       {/* Container for everything */}
       <div className="flex mx-auto justify-between w-[90%] -850:flex-col -850:items-start -850:gap-16">
         {/* Container for the pictures and socials */}
@@ -118,7 +118,7 @@ export default function Footer() {
               <div
                 onMouseEnter={scaleImage}
                 onMouseLeave={scaleImageDown}
-                className="flex flex-col relative cursor-pointer footer_link"
+                className="flex flex-col relative cursor-pointer footer_link font-bold"
                 key={item}
               >
                 {/* Container on top of line that has the word and bubble */}

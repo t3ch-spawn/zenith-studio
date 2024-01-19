@@ -6,7 +6,7 @@ import GetInTouch from "./reusables/GetInTouch";
 
 export default function OurPortfolio() {
   return (
-    <section className="bg-grayBg p-4 py-20 flex flex-col gap-16 items-start">
+    <section className="bg-grayBg p-4 py-20 flex flex-col gap-16 items-start font-medium">
       {/* Container for heading and line */}
       <div className="flex flex-col w-[90%] mx-auto">
         <h2 className="text-[#A39E9F] section-heading">Our Portfolio</h2>
@@ -27,12 +27,12 @@ export default function OurPortfolio() {
       <div className="flex w-full -550:flex-col justify-center items-center gap-10">
         <GetInTouch
           phrase="Get in touch"
-          styles="w-full max-w-[280px] -550:max-w-[400px] !justify-between !px-5"
+          styles="w-full max-w-[280px] -550:max-w-[300px]  !px-5"
         />
         <GetInTouch
           phrase="Browse portfolio"
           arrStyles="hidden"
-          styles="!bg-transparent border-white border-[1px] !text-white p-4 !px-6 w-full max-w-[280px] -550:max-w-[400px]"
+          styles="!bg-transparent border-white border-[1px] !text-white p-4 !px-6 w-full max-w-[280px] -550:max-w-[300px]"
         />
       </div>
     </section>
@@ -41,7 +41,7 @@ export default function OurPortfolio() {
 
 function PortfolioHelper(props) {
   return (
-    <div className="flex -950:flex-col -950:items-start justify-between w-[90%] mx-auto items-center gap-10">
+    <div className="flex -950:flex-col -950:items-start justify-between w-[90%] mx-auto items-center gap-10 ">
       {/* Image on the left */}
       <div className={`folio-pic-cont overflow-hidden ${props.className}`}>
         <ParallaxImg

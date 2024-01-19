@@ -63,7 +63,7 @@ export default function Header() {
             onClick={handleNav}
             className={`${
               burgerClicked ? "active" : "inactive"
-            } burger flex flex-col bg-[#222] justify-center relative items-center gap-2 h-[40px] w-[40px] rounded-[50%] cursor-pointer z-[110] overflow-hidden`}
+            } burger flex flex-col bg-[#222] justify-center relative items-center gap-2 h-[40px] w-[40px] p-5 rounded-[50%] cursor-pointer z-[110] overflow-hidden`}
           >
             <div className="line-1 bg-white h-[2px] border-none absolute w-[50%] rounded-md translate-y-[-4px]"></div>
             <div className="line-2 bg-white h-[2px] border-none absolute w-[50%] rounded-md translate-y-[4px]"></div>
@@ -83,7 +83,7 @@ export default function Header() {
             return (
               <div
                 key={idx}
-                className="text-8xl -950:text-5xl -550:text-3xl  text-white relative overflow-hidden cursor-pointer uppercase nav_link-cont"
+                className="text-8xl -950:text-5xl -550:text-3xl  text-white relative overflow-hidden cursor-pointer uppercase font-medium nav_link-cont"
               >
                 <div className="nav_link1-cont flex translate-y-[-100%]">
                   <p className="text-white text-sm -550:text-xs relative left-[1px] top-[7px] -950:top-[0px] -550:left-[0px]">

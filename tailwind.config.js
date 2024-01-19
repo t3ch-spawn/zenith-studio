@@ -19,6 +19,9 @@ export default {
         "-500": { max: "500px" },
         "-400": { max: "400px" },
       },
+      fontFamily: {
+        moderat: "Moderat-Condensed",
+      },
     },
   },
   plugins: [],

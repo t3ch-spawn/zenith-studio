@@ -13,7 +13,7 @@ const slides = [
     heading: "They did absolutely amazing!",
     para: `Absolutely thrilled with Zenith! Their casual and collaborative approach turned our vision into a stunning reality. Highly recommend for a personalized and outstanding experience!"`,
     img: paul,
-    name: `Steve Pau `,
+    name: `Steve Paul`,
     location: "Princeton, New Jersey",
   },
   {
@@ -108,8 +108,8 @@ export default function Clients() {
                       key={slide.id}
                       className="slide  w-full absolute h-full flex flex-col justify-around -750:justify-center gap-6 items-start text-white"
                     >
-                      <h3 className="text-3xl -750:text-2xl -400:text-xl">{`"${slide.heading}"`}</h3>
-                      <p className="text-xl -750:text-lg -550:text-sm">
+                      <h3 className="text-3xl -750:text-2xl -400:text-xl font-medium">{`"${slide.heading}"`}</h3>
+                      <p className="text-xl -750:text-lg -550:text-sm font-normal">
                         {slide.para}
                       </p>
 
@@ -122,7 +122,9 @@ export default function Clients() {
 
                         <div className="flex flex-col items-start text-base -550:text-sm">
                           <p>{slide.name}</p>
-                          <p className="text-folioGray">{slide.location}</p>
+                          <p className="text-folioGray font-light">
+                            {slide.location}
+                          </p>
                         </div>
                       </div>
                     </div>
