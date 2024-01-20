@@ -333,4 +333,5 @@ main > section {
 
 .marque-container:hover .marque {
   opacity: 1;
+color: #545353
 }

@@ -27,12 +27,12 @@ export default function OurPortfolio() {
       <div className="flex w-full -550:flex-col justify-center items-center gap-10">
         <GetInTouch
           phrase="Get in touch"
-          styles="w-full max-w-[280px] -550:max-w-[300px] !justify-between -550:!justify-center !px-5"
+          styles="!justify-between -550:!justify-between !pl-4"
         />
         <GetInTouch
           phrase="Browse portfolio"
           arrStyles="hidden"
-          styles="!bg-transparent border-white border-[1px] !text-white p-4 !px-6 w-full max-w-[280px] -550:max-w-[300px]"
+          styles="!bg-transparent border-white border-[1px]  !text-white p-4 !px-6"
         />
       </div>
     </section>

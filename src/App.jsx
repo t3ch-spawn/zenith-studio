@@ -11,6 +11,7 @@ import TogetherMarque from "./components/TogetherMarque";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
 import Header from "./components/Header";
+import Loader from "./components/Loader";
 
 export const Context = React.createContext();
 
@@ -33,6 +34,7 @@ function App() {
     <Context.Provider value={[heroImgHeight, setHeroImgHeight]}>
       <main className="relative">
         <CustomCursor />
+        <Loader />
         <Header />
         <Hero />
         <Services />
