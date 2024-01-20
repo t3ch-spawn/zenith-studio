@@ -17,7 +17,7 @@ export default function Hero() {
           {" "}
           Crafting your dreams together.{" "}
         </h1>
-        <p className="font-normal text-2xl -550:text-xl">
+        <p className="font-normal text-2xl -550:text-xl not-italic">
           Unveiling your vision: where dreams and craftmanship converge{" "}
         </p>
       </div>

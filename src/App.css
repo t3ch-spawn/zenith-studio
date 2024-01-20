@@ -26,7 +26,7 @@
 body {
   cursor: none;
   font-family: "Moderat-Condensed";
-  position: fixed;
+  position: relative;
 }
 
 body.active {
@@ -332,11 +332,11 @@ main > section {
 
 /* Animation for marque container */
 .marque {
-  transition: 0.4s ease-in-out;
   opacity: 0.5;
+  transition: 0.5s;
+  transition-property: opacity;
 }
 
 .marque-container:hover .marque {
   opacity: 1;
-  color: #545353;
 }

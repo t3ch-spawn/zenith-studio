@@ -87,7 +87,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="services-section flex flex-col gap-10 pt-[400px] -950:pt-[45%] z-[15] relative bg-[#F3EEEE]"
+      className="services-section flex flex-col gap-10 pt-[500px]  -950:pt-[45%] z-[15] relative bg-[#F3EEEE]"
     >
       <h2 className="text-6xl -950:text-3xl font-medium">
         <span className="max-w-[500px] hidden -400:block  -400:!text-3xl">
@@ -195,7 +195,7 @@ function DescriptionHelper(props) {
     <div className="w-full description-div text-xl">
       <div className="flex gap-10">
         <p className="italic font-light">{props.number}</p>{" "}
-        <p className="font-normal">{props.descrip}</p>
+        <p className="font-normal not-italic">{props.descrip}</p>
       </div>
       <div className="description-line relative" />
     </div>
