@@ -28,7 +28,7 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div className="custom-cursor fixed bg-white h-[20px] w-[20px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none"></div>
+      <div className="custom-cursor fixed bg-white h-[15px] w-[15px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none"></div>
 
       <div className="cursor-dot h-[5px] w-[5px] fixed bg-white rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%]"></div>
     </>
