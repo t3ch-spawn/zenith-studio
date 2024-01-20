@@ -26,6 +26,9 @@ export default function Loader() {
               scaleY: 0,
               pointerEvents: "none",
               stagger: { amount: 0.4 },
+              onComplete: () => {
+                document.querySelector("body").classList.add("active");
+              },
             });
         }, 2000);
       }
@@ -81,7 +84,7 @@ export default function Loader() {
 
   return (
     <>
-      <div className="loader-container fixed z-[200] bg-grayBg h-full w-full top-0 left-0 flex flex-col justify-center items-center origin-top pointer-event-none">
+      <div className="loader-container fixed z-[200] bg-grayBg h-full w-full top-0 left-0 flex flex-col justify-center items-center origin-top">
         <RiveComponent className="rive-component w-full max-w-[750px] mx-auto h-full" />
         <p
           className={`${

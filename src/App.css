@@ -26,6 +26,11 @@
 body {
   cursor: none;
   font-family: "Moderat-Condensed";
+  position: fixed;
+}
+
+body.active {
+  position: relative;
 }
 
 main > section {
@@ -333,5 +338,5 @@ main > section {
 
 .marque-container:hover .marque {
   opacity: 1;
-color: #545353
+  color: #545353;
 }
