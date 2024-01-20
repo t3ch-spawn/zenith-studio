@@ -81,7 +81,7 @@ export default function Loader() {
 
   return (
     <>
-      <div className="loader-container fixed z-[200] bg-grayBg h-full w-full top-0 left-0 flex flex-col justify-center items-center origin-top">
+      <div className="loader-container fixed z-[200] bg-grayBg h-full w-full top-0 left-0 flex flex-col justify-center items-center origin-top pointer-event-none">
         <RiveComponent className="rive-component w-full max-w-[750px] mx-auto h-full" />
         <p
           className={`${
