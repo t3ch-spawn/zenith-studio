@@ -14,24 +14,24 @@ export default function Loader() {
     stateMachines: "zenith anim",
     autoplay: true,
     onStateChange: (e) => {
-      //   if (e.data[0] == "exit") {
-      //     setTimeout(() => {
-      //       gsap
-      //         .timeline()
-      //         .to(".rive-component", {
-      //           opacity: 0,
-      //           pointerEvents: "none",
-      //         })
-      //         .to(".loader-container", {
-      //           scaleY: 0,
-      //           pointerEvents: "none",
-      //           stagger: { amount: 0.4 },
-      //           onComplete: () => {
-      //             document.querySelector("body").classList.add("active");
-      //           },
-      //         });
-      //     }, 2000);
-      //   }
+      if (e.data[0] == "exit") {
+        setTimeout(() => {
+          gsap
+            .timeline()
+            .to(".rive-component", {
+              opacity: 0,
+              pointerEvents: "none",
+            })
+            .to(".loader-container", {
+              scaleY: 0,
+              pointerEvents: "none",
+              stagger: { amount: 0.4 },
+              onComplete: () => {
+                document.querySelector("body").classList.add("active");
+              },
+            });
+        }, 2000);
+      }
     },
   });
 
@@ -93,7 +93,7 @@ export default function Loader() {
           <div
             className={`${
               progressNumber == 100 ? "active" : ""
-            } bg-[#d9d9d9] w-[400px] flex justify-center items-center h-[5px] relative loading-bar`}
+            } bg-[#d9d9d9] w-[90%] max-w-[400px] flex justify-center items-center h-[5px] relative loading-bar`}
           >
             <div className=" bg-black loader-fill duration-[250ms] ease-in-out h-[98%] left-0 absolute"></div>
           </div>
