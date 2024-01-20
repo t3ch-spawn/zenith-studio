@@ -86,14 +86,14 @@ export default function Loader() {
 
   return (
     <>
-      <div className="loader-container fixed z-[200] bg-grayBg h-full w-full top-0 left-0 flex flex-col justify-center items-center origin-top">
+      <div className="loader-container fixed z-[200]  bg-grayBg h-full w-full top-0 left-0 flex flex-col justify-center items-center origin-top">
         <RiveComponent className="rive-component w-full max-w-[750px] mx-auto h-full" />
 
-        <div className="absolute translate-x-[-50%] left-[50%] bottom-[20%] flex flex-col gap-6">
+        <div className="absolute translate-x-[-50%] w-full left-[50%] bottom-[20%] flex flex-col gap-6">
           <div
             className={`${
               progressNumber == 100 ? "active" : ""
-            } bg-[#d9d9d9] w-[90%] max-w-[400px] flex justify-center items-center h-[5px] relative loading-bar`}
+            } bg-[#d9d9d9] w-[90%] mx-auto max-w-[400px] flex justify-center items-center h-[5px] relative loading-bar`}
           >
             <div className=" bg-black loader-fill duration-[250ms] ease-in-out h-[98%] left-0 absolute"></div>
           </div>
