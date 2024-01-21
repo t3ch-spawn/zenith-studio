@@ -113,7 +113,7 @@ export default function Services() {
       </h2>
 
       <div className="w-full flex justify-end -950:justify-start">
-        <p className="w-full max-w-[400px] font-normal">
+        <p className="w-full max-w-[400px] font-normal font-moderatReg">
           Our architectural firm takes a distinctive approach to services,
           fostering a casual and conversational process. From initial
           consultations to project completion, we prioritize open dialogue,
@@ -195,7 +195,7 @@ function DescriptionHelper(props) {
     <div className="w-full description-div text-xl">
       <div className="flex gap-10">
         <p className="italic font-light">{props.number}</p>{" "}
-        <p className="font-normal not-italic">{props.descrip}</p>
+        <p className="font-normal font-moderatReg">{props.descrip}</p>
       </div>
       <div className="description-line relative" />
     </div>

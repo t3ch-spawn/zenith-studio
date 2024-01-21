@@ -22,6 +22,7 @@ export default {
       },
       fontFamily: {
         moderat: "Moderat-Condensed",
+        moderatReg: "Moderat-Regular",
       },
     },
   },

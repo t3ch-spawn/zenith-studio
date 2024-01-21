@@ -19,7 +19,7 @@ export default function Hero() {
           {" "}
           Crafting your dreams together.{" "}
         </h1>
-        <p className="font-normal heading-para text-2xl -550:text-xl not-italic">
+        <p className="font-normal heading-para text-2xl -550:text-xl font-moderatReg">
           Unveiling your vision: where dreams and craftmanship converge{" "}
         </p>
       </div>

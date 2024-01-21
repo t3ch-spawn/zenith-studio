@@ -109,7 +109,7 @@ export default function Clients() {
                       className="slide  w-full absolute h-full flex flex-col justify-around -750:justify-center gap-6 items-start text-white"
                     >
                       <h3 className="text-3xl -750:text-2xl -400:text-xl font-medium">{`"${slide.heading}"`}</h3>
-                      <p className="text-xl -750:text-lg -550:text-sm font-normal">
+                      <p className="text-xl -750:text-lg -550:text-sm font-normal font-moderatReg">
                         {slide.para}
                       </p>
 
