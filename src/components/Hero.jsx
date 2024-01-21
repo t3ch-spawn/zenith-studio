@@ -39,7 +39,7 @@ export default function Hero() {
           className="scroll-down-btn flex items-center gap-2 -550:flex-col-reverse -550:text-xs"
         >
           Scroll down
-          <div className="border-white border-[2px] -550:h-[40px] -550:w-[40px] -550:p-2 rounded-[50%] p-4 flex justify-center items-center overflow-hidden">
+          <div className="border-white border-[2px] -550:h-[45px] -550:w-[45px] -550:p-2 rounded-[50%] p-4 flex justify-center items-center overflow-hidden">
             <img
               className="hero-arrow-down rotate-90"
               src={arrowRight}
