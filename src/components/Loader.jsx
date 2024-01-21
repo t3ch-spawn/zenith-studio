@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import gsap from "gsap";
+import SplitType from "split-type";
+
 // import createjs from "preloadjs"
 
 export default function Loader() {
@@ -16,6 +18,32 @@ export default function Loader() {
     onStateChange: (e) => {
       if (e.data[0] == "exit") {
         setTimeout(() => {
+          const headingText = new SplitType(".hero-heading", {
+            types: "words, chars",
+          });
+          const heroPara = document.querySelector(".heading-para");
+          const heroGetBtn = document.querySelector(".hero_get-in-touch");
+          const scrollDownBtn = document.querySelector(".scroll-down-btn");
+          const herLine = document.querySelector(".hero-line");
+
+          gsap.set(heroGetBtn, {
+            x: "-200px",
+            opacity: 0,
+          });
+          gsap.set(scrollDownBtn, {
+            x: "200px",
+            opacity: 0,
+          });
+          gsap.set(headingText.words, {
+            y: "50px",
+            opacity: 0,
+            stagger: 0.1,
+          });
+          gsap.set(heroPara, {
+            y: "50px",
+            opacity: 0,
+          });
+
           gsap
             .timeline()
             .to(".rive-component", {
@@ -28,6 +56,29 @@ export default function Loader() {
               stagger: { amount: 0.4 },
               onComplete: () => {
                 document.querySelector("body").classList.add("active");
+              },
+            })
+            .to(herLine, {
+              scaleX: "100%",
+              opacity: 1,
+              onComplete: () => {
+                gsap.to(heroGetBtn, {
+                  x: "0px",
+                  opacity: 1,
+                });
+                gsap.to(scrollDownBtn, {
+                  x: "0px",
+                  opacity: 1,
+                });
+                gsap.to(headingText.words, {
+                  y: "0px",
+                  opacity: 1,
+                  stagger: 0.1,
+                });
+                gsap.to(heroPara, {
+                  y: "0px",
+                  opacity: 1,
+                });
               },
             });
         }, 2000);

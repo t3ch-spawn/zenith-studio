@@ -19,11 +19,6 @@ export default function CustomCursor() {
         }
       );
     });
-
-    // document.addEventListener("scroll", (e) => {
-    //   cursor.style.top = e.pageY + "px";
-    //   cursor.style.left = e.pageX + "px";
-    // });
   }, []);
 
   return (

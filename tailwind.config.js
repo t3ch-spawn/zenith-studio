@@ -18,6 +18,7 @@ export default {
         "-550": { max: "550px" },
         "-500": { max: "500px" },
         "-400": { max: "400px" },
+        "-350": { max: "350px" },
       },
       fontFamily: {
         moderat: "Moderat-Condensed",

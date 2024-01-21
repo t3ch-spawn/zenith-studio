@@ -7,34 +7,39 @@ import { Context } from "../App";
 import GetInTouch from "./reusables/GetInTouch";
 
 export default function Hero() {
+  useEffect(() => {}, []);
+
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
 
   return (
     <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative pb-[400px]  -950:pb-[35%]">
       {/* div containing heading and typography */}
-      <div className="flex flex-col max-w-[1000px] w-full gap-[50px]">
+      <div className="flex flex-col max-w-[1000px] w-full gap-[50px] overflow-hidden">
         <h1 className="hero-heading text-8xl leading-[100%] font-medium">
           {" "}
           Crafting your dreams together.{" "}
         </h1>
-        <p className="font-normal text-2xl -550:text-xl not-italic">
+        <p className="font-normal heading-para text-2xl -550:text-xl not-italic">
           Unveiling your vision: where dreams and craftmanship converge{" "}
         </p>
       </div>
 
-      <hr className="border-none bg-white h-[1px]" />
+      <hr className="border-none hero-line scale-x-0 origin-center bg-white h-[1px]" />
 
       {/* div containing the buttons */}
-      <div className="justify-between flex">
+      <div className="justify-between items-start flex">
         {/* Get in touch btn */}
         <GetInTouch
           phrase="Get in touch"
-          styles="-500:w-[90%] -400:mx-auto -400:w-full !justify-between !pl-4"
+          styles=" !justify-between !pl-4 -350:pl-2 hero_get-in-touch -350:max-w-[150px] -350:text-sm"
         />
         {/* Scroll down btn */}
-        <a href="#services" className="flex items-center gap-2 -550:hidden">
+        <a
+          href="#services"
+          className="scroll-down-btn flex items-center gap-2 -550:flex-col-reverse -550:text-xs"
+        >
           Scroll down
-          <div className="border-white border-[2px] rounded-[50%] p-4 flex justify-center items-center overflow-hidden">
+          <div className="border-white border-[2px] -550:h-[40px] -550:w-[40px] -550:p-2 rounded-[50%] p-4 flex justify-center items-center overflow-hidden">
             <img
               className="hero-arrow-down rotate-90"
               src={arrowRight}
