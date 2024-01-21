@@ -79,7 +79,7 @@ export default function Footer() {
   return (
     <section
       id="contact"
-      className=" bg-[#F3EEEE] footer relative z-[8] flex justify-between w-[100%] mx-auto min-h-[70vh] items-center pt-[100px]"
+      className=" bg-[#F3EEEE] footer relative z-[8] justify-between w-[100%] mx-auto min-h-[70vh] items-center pt-[100px] flex flex-col gap-6"
     >
       {/* Container for everything */}
       <div className="flex mx-auto justify-between w-[90%] -850:flex-col -850:items-start -850:gap-16">
@@ -160,6 +160,17 @@ export default function Footer() {
             );
           })}
         </div>
+      </div>
+
+      <div className="font-medium">
+        Built with 🤍 + 🍭 by{" "}
+        <a className="underline" href="https://twitter.com/t3ch_spawn">
+          t3chspawn
+        </a>{" "}
+        +{" "}
+        <a className="underline" href="https://victorodj.vzy.io">
+          shalaye
+        </a>{" "}
       </div>
     </section>
   );
