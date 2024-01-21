@@ -48,6 +48,15 @@ export default function Header() {
   function handleNav() {
     setBurgerClicked(!burgerClicked);
   }
+
+  function scrollToSection(e) {
+    setBurgerClicked(!burgerClicked);
+    const id = e.currentTarget.getAttribute("id").replace("#", "");
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
   return (
     <nav className="bg-grayBg flex w-full sticky top-0 z-[80] shadow-md px-10 -850:px-5 py-4 nav-cont">
       {/* Container for everything */}
@@ -83,6 +92,8 @@ export default function Header() {
             return (
               <div
                 key={idx}
+                id={`#${link.toLocaleLowerCase()}`}
+                onClick={scrollToSection}
                 className="text-8xl -950:text-5xl -550:text-3xl  text-white relative overflow-hidden cursor-pointer uppercase font-medium nav_link-cont"
               >
                 <div className="nav_link1-cont flex translate-y-[-100%]">

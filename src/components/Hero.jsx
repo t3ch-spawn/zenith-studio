@@ -7,12 +7,21 @@ import { Context } from "../App";
 import GetInTouch from "./reusables/GetInTouch";
 
 export default function Hero() {
-  useEffect(() => {}, []);
+  function scrollToService(e) {
+    const id = e.currentTarget.getAttribute("href").replace("#", "");
+    const element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
 
   return (
-    <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative pb-[400px]  -950:pb-[35%]">
+    <section
+      id="home"
+      className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative pb-[400px]  -950:pb-[35%]"
+    >
       {/* div containing heading and typography */}
       <div className="flex flex-col max-w-[1000px] w-full gap-[50px] overflow-hidden">
         <h1 className="hero-heading text-8xl leading-[100%] font-medium">
@@ -27,26 +36,27 @@ export default function Hero() {
       <hr className="border-none hero-line scale-x-0 origin-center bg-white h-[1px]" />
 
       {/* div containing the buttons */}
-      <div className="justify-between items-start flex">
+      <div className="justify-between items-start flex overflow-hidden">
         {/* Get in touch btn */}
         <GetInTouch
           phrase="Get in touch"
           styles=" !justify-between !pl-4 -350:pl-2 hero_get-in-touch -350:max-w-[150px] -350:text-sm"
         />
         {/* Scroll down btn */}
-        <a
+        <button
           href="#services"
           className="scroll-down-btn flex items-center gap-2 -550:flex-col-reverse -550:text-xs"
+          onClick={scrollToService}
         >
           Scroll down
           <div className="border-white border-[2px] -550:h-[45px] -550:w-[45px] -550:p-2 rounded-[50%] p-4 flex justify-center items-center overflow-hidden">
             <img
-              className="hero-arrow-down rotate-90"
+              className="hero-arrow-down rotate-90 pointer-events-none"
               src={arrowRight}
               alt=""
             />
           </div>
-        </a>
+        </button>
       </div>
 
       <div

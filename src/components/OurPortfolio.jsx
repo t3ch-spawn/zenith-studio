@@ -6,7 +6,10 @@ import GetInTouch from "./reusables/GetInTouch";
 
 export default function OurPortfolio() {
   return (
-    <section className="bg-grayBg p-4 py-20 flex flex-col gap-16 items-start font-medium">
+    <section
+      id="about"
+      className="bg-grayBg p-4 py-20 flex flex-col gap-16 items-start font-medium"
+    >
       {/* Container for heading and line */}
       <div className="flex flex-col w-[90%] mx-auto">
         <h2 className="text-[#A39E9F] section-heading">Our Portfolio</h2>
