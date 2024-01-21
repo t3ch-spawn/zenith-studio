@@ -18,10 +18,7 @@ export default function Hero() {
   const [heroImgHeight, setHeroImgHeight] = useContext(Context);
 
   return (
-    <section
-      id="home"
-      className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative pb-[400px]  -950:pb-[35%]"
-    >
+    <section className="flex flex-col w-full hero bg-grayBg text-white gap-[50px] relative pb-[400px]  -950:pb-[35%]">
       {/* div containing heading and typography */}
       <div className="flex flex-col max-w-[1000px] w-full gap-[50px] overflow-hidden">
         <h1 className="hero-heading text-8xl leading-[100%] font-medium">

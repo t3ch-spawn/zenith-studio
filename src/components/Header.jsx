@@ -38,10 +38,8 @@ export default function Header() {
     const body = document.querySelector("body");
     if (burgerClicked) {
       animation.current.play();
-      body.classList.add("inactive");
     } else {
       animation.current.reverse();
-      body.classList.remove("inactive");
     }
   }, [burgerClicked]);
 
@@ -51,8 +49,16 @@ export default function Header() {
 
   function scrollToSection(e) {
     setBurgerClicked(!burgerClicked);
+
     const id = e.currentTarget.getAttribute("id").replace("#", "");
     const element = document.getElementById(id);
+    if (id == "home") {
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
     element.scrollIntoView({
       behavior: "smooth",
     });
@@ -62,7 +68,17 @@ export default function Header() {
       {/* Container for everything */}
       <div className="flex justify-between w-[100%] mx-auto">
         {/* icon */}
-        <img src={icon} className="z-[110]" alt="" />
+        <img
+          src={icon}
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="z-[110]"
+          alt=""
+        />
 
         {/* Container for hamburger and icon */}
         <div className="flex items-center justify-center gap-10 -550:gap-6">
@@ -79,6 +95,13 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Overlay that shields reveal bug */}
+      <div
+        className={`z-[90] bg-grayBg h-[150%] w-full fixed top-0 left-0 ${
+          burgerClicked ? "block" : "hidden"
+        }`}
+      ></div>
 
       {/* Overlay that shows navigation */}
       <div
