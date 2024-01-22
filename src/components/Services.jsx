@@ -8,6 +8,7 @@ import exterior from "../assets/exterior.png";
 import construction from "../assets/construction.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
 
 export default function Services() {
   const [heroImgHeight] = useContext(Context);
@@ -82,6 +83,21 @@ export default function Services() {
         }),
       }),
     ]);
+
+    // Animation for the paragraph to get bold in view
+    const servicesPara = new SplitType(".services-para", { types: "words" });
+
+    ScrollTrigger.create({
+      trigger: ".services-para",
+      scrub: true,
+      start: "top 70%",
+      end: "bottom 40%",
+      animation: gsap.from(servicesPara.words, {
+        opacity: 0.2,
+        duration: 0.3,
+        stagger: 0.3,
+      }),
+    });
   }, []);
 
   return (
@@ -113,7 +129,7 @@ export default function Services() {
       </h2>
 
       <div className="w-full flex justify-end -950:justify-start">
-        <p className="w-full max-w-[400px] font-normal font-moderatReg">
+        <p className="w-full max-w-[400px] font-normal font-moderatReg services-para">
           Our architectural firm takes a distinctive approach to services,
           fostering a casual and conversational process. From initial
           consultations to project completion, we prioritize open dialogue,

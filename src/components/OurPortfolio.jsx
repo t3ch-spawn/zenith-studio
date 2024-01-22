@@ -34,8 +34,9 @@ export default function OurPortfolio() {
         />
         <GetInTouch
           phrase="Browse portfolio"
+          browse="Browse portfolio"
           arrStyles="hidden"
-          styles="!bg-transparent border-white border-[1px]  !text-white p-4 !px-6"
+          styles="!bg-transparent border-white border-[1px]  !text-white p-4 !px-6 browse-folio"
         />
       </div>
     </section>

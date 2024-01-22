@@ -30,7 +30,7 @@
 body {
   cursor: none;
   font-family: "Moderat-Condensed";
-  position: fixed;
+  position: relative;
 }
 
 body.active {
@@ -75,8 +75,9 @@ main > section {
 
 /* animation for hover on get in touch button */
 .arrow-right,
-.get-in-touch_phrase {
-  transition: 0.4s;
+.get-in-touch_phrase,
+.browse-folio_phrase {
+  transition: 0.4s cubic-bezier(.58,.11,.06,1.61);
 }
 
 .get-in-touch:hover .get-in-touch_phrase {
@@ -95,6 +96,15 @@ main > section {
   .get-in-touch:hover .arrow-right {
     transform: translateX(0%);
   }
+}
+
+/* animation for hover on browse folio */
+.browse-folio:hover .get-in-touch_phrase {
+  transform: translateY(-200%);
+}
+
+.browse-folio:hover .browse-folio_phrase {
+  transform: translateY(0%);
 }
 
 @keyframes arrDownMotion {
