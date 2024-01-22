@@ -141,7 +141,7 @@ export default function News() {
                 return (
                   <div
                     key={idx}
-                    className="text-black bg-white p-3 font-[700] cursor-pointer"
+                    className="text-black bg-white p-3 font-[700] cursor-pointer hover:bg-[#D1D1D1] duration-300"
                   >
                     {category}
                   </div>
@@ -166,7 +166,7 @@ export default function News() {
             className="subscribe-input border-b-2 relative border-grayText bg-transparent placeholder:text-grayText w-full  focus:outline-none text-white pb-2 pl-2"
           />
           <div className="absolute bg-white h-[2px] w-[0px] duration-300 ease-in-out bottom-0 left-0"></div>
-          <button className="text-black bg-white p-3 font-[700] cursor-pointer">
+          <button className="text-black bg-white p-3 font-[700] cursor-pointer hover:bg-[#D1D1D1] duration-300">
             Subscribe
           </button>
         </div>

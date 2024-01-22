@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import ParallaxImg from "./ParallaxImg";
 
 export default function Services_Card(props) {
+  const line1 = useRef(null);
+
+  function animateLines(e) {
+    if (!line1.current.classList.contains("right")) {
+      line1.current.classList.add("right");
+    } else {
+      line1.current.classList.toggle("left");
+    }
+  }
   return (
     <div className={`z-[${props.number}] service-card max-w-[550px] relative`}>
       <p
@@ -25,7 +34,17 @@ export default function Services_Card(props) {
           </span>
           {props.para}
         </p>
-        <p>View service</p>
+        <div
+          className="relative w-fit cursor-pointer py-2"
+          onMouseEnter={animateLines}
+          onMouseLeave={animateLines}
+        >
+          <p>View service</p>
+          <div
+            ref={line1}
+            className="line-1 absolute w-full h-[1px] bg-[white] right-0"
+          ></div>
+        </div>
       </div>
     </div>
   );

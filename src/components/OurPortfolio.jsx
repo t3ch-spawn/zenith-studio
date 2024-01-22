@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import interior from "../assets/portfolio-interior.png";
 import archi from "../assets/portfolio-archi.png";
 import ParallaxImg from "./reusables/ParallaxImg";
@@ -43,6 +43,15 @@ export default function OurPortfolio() {
 }
 
 function PortfolioHelper(props) {
+  const line1 = useRef(null);
+
+  function animateLines(e) {
+    if (!line1.current.classList.contains("right")) {
+      line1.current.classList.add("right");
+    } else {
+      line1.current.classList.toggle("left");
+    }
+  }
   return (
     <div className="flex -950:flex-col -950:items-start justify-between w-[90%] mx-auto items-center gap-10 ">
       {/* Image on the left */}
@@ -63,9 +72,16 @@ function PortfolioHelper(props) {
           <p>New jersey</p> <hr className="w-[50px]" /> <p>Jan 5, 2024</p>
         </div>
         <h3 className="text-2xl max-w-[400px]">{props.heading}</h3>
-        <div className="cursor-pointer">
+        <div
+          onMouseEnter={animateLines}
+          onMouseLeave={animateLines}
+          className="cursor-pointer relative py-2"
+        >
           <p>View Project</p>
-          <hr className="w-full bg-[#A39E9F] border-none h-[1px]" />
+          <div
+            ref={line1}
+            className="line-1 absolute w-full h-[1px] bg-[#ffffff33] right-0"
+          ></div>
         </div>
       </div>
     </div>

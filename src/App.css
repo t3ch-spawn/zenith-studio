@@ -352,3 +352,35 @@ main > section {
 .loading-bar.active {
   transform: scale(0);
 }
+
+/* Css for the lines */
+.line-1 {
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.line-1.right {
+  right: 0;
+  width: 0%;
+}
+
+.line-1.left {
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .line-1.right {
+    right: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .line-1.left {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.colroworig {
+  color: #ffffff33;
+}
