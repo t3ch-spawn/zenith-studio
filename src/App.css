@@ -81,7 +81,7 @@ main > section {
 
 .get-in-touch:hover .get-in-touch_phrase {
   transform: translateX(-50%);
-  left: 50%;
+  left: 45%;
 }
 .get-in-touch:hover .arrow-right {
   transform: translateX(150%);

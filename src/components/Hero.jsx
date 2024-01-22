@@ -37,7 +37,7 @@ export default function Hero() {
         {/* Get in touch btn */}
         <GetInTouch
           phrase="Get in touch"
-          styles=" !justify-between !pl-4 -350:pl-2 hero_get-in-touch -350:max-w-[150px] -350:text-sm"
+          styles=" !justify-between !pl-4 -350:pl-2 hero_get-in-touch -350:max-w-[150px] -350:text-sm get-in-touch "
         />
         {/* Scroll down btn */}
         <button

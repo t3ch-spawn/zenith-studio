@@ -144,7 +144,7 @@ export default function Loader() {
           <div
             className={`${
               progressNumber == 100 ? "active" : ""
-            } bg-[#d9d9d9] w-[90%] mx-auto max-w-[400px] flex justify-center items-center h-[5px] relative loading-bar`}
+            } bg-[#d9d9d9] w-[90%] mx-auto max-w-[300px] flex justify-center items-center h-[3px] relative loading-bar`}
           >
             <div className=" bg-black loader-fill duration-[250ms] ease-in-out h-[98%] left-0 absolute"></div>
           </div>

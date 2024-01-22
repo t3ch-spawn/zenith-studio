@@ -30,7 +30,7 @@ export default function OurPortfolio() {
       <div className="flex w-full -550:flex-col justify-center items-center gap-10">
         <GetInTouch
           phrase="Get in touch"
-          styles="!justify-between -550:!justify-between !pl-4"
+          styles="!justify-between -550:!justify-between !pl-4 get-in-touch "
         />
         <GetInTouch
           phrase="Browse portfolio"
