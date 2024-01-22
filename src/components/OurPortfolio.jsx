@@ -80,7 +80,7 @@ function PortfolioHelper(props) {
           <p>View Project</p>
           <div
             ref={line1}
-            className="line-1 absolute w-full h-[1px] bg-[#ffffff33] right-0"
+            className="line-1 absolute w-full h-[1px] bg-[white] right-0"
           ></div>
         </div>
       </div>
