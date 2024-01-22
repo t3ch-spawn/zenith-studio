@@ -12,6 +12,7 @@ const icons = [linkedIn, twitter, youtube, instagram];
 const nav_links = ["Home", "About", "Services", "Journal", "Contact"];
 export default function Header() {
   const [burgerClicked, setBurgerClicked] = useState(false);
+  const [isNavShown, setIsNavShown] = useState(false);
   //   const [hasClickedOnce, setHasClickedOnce] = usest
   //   const []
   const animation = useRef();
@@ -28,9 +29,15 @@ export default function Header() {
       .to(".nav-main", {
         scaleY: 1,
         opacity: 1,
+        onComplete: () => {
+          setIsNavShown(true);
+        },
       })
       .to(".nav_link1-cont", {
         y: "0%",
+        onReverseComplete: () => {
+          setIsNavShown(false);
+        },
       });
   }, []);
 
@@ -99,7 +106,7 @@ export default function Header() {
       {/* Overlay that shields reveal bug */}
       <div
         className={`z-[90] bg-grayBg h-[150%] w-full fixed top-0 left-0 ${
-          burgerClicked ? "block" : "hidden"
+          isNavShown ? "block" : "hidden"
         }`}
       ></div>
 
