@@ -30,7 +30,7 @@
 body {
   cursor: none;
   font-family: "Moderat-Condensed";
-  position: relative;
+  position: fixed;
 }
 
 body.active {
